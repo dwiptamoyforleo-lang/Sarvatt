@@ -4,56 +4,11 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  initMobileNavigation();
   initLightbox();
   initScrollSpy();
   initDynamicYear();
   initVideoInteractions();
 });
-
-/* ==========================================================================
-   MOBILE NAVIGATION DRAWER
-   ========================================================================== */
-function initMobileNavigation() {
-  const toggleBtn = document.getElementById('mobile-toggle');
-  const closeBtn = document.getElementById('mobile-close');
-  const drawer = document.getElementById('mobile-drawer');
-  const overlay = document.getElementById('mobile-overlay');
-  const mobileLinks = document.querySelectorAll('.mobile-link');
-
-  if (!toggleBtn || !drawer || !overlay) return;
-
-  function openDrawer() {
-    drawer.classList.add('open');
-    overlay.classList.add('open');
-    toggleBtn.setAttribute('aria-expanded', 'true');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeDrawer() {
-    drawer.classList.remove('open');
-    overlay.classList.remove('open');
-    toggleBtn.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
-  }
-
-  toggleBtn.addEventListener('click', openDrawer);
-  if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
-  overlay.addEventListener('click', closeDrawer);
-
-  mobileLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      closeDrawer();
-    });
-  });
-
-  // Handle escape key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && drawer.classList.contains('open')) {
-      closeDrawer();
-    }
-  });
-}
 
 /* ==========================================================================
    INTERACTIVE GALLERY LIGHTBOX
