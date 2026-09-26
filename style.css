@@ -2034,3 +2034,262 @@ button {
 }
 
 
+
+
+/* ==========================================================================
+   CONTROL LAYOUT REPAIR
+   Keeps header Sign In, Get Started, and theme controls visually stable
+   across desktop, tablet, and mobile sizes.
+   ========================================================================== */
+
+.site-header .header-container {
+  min-width: 0;
+}
+
+.site-header .header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.65rem;
+  min-width: 0;
+  flex-shrink: 0;
+}
+
+.site-header .header-actions > .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  height: 40px;
+  padding: 0 1rem;
+  margin: 0;
+  line-height: 1.15;
+  white-space: nowrap;
+  flex: 0 0 auto;
+  box-sizing: border-box;
+}
+
+.site-header .header-actions > .btn.btn-sm {
+  min-height: 40px;
+  height: 40px;
+  padding: 0 1rem;
+  font-size: 0.875rem;
+}
+
+.site-header .theme-selector {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+}
+
+.site-header .theme-toggle-btn {
+  width: 40px;
+  min-width: 40px;
+  max-width: 40px;
+  height: 40px;
+  min-height: 40px;
+  max-height: 40px;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  line-height: 1;
+  flex: 0 0 40px;
+}
+
+.site-header .theme-btn-icon {
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 18px;
+}
+
+.site-header .theme-btn-icon svg {
+  width: 18px;
+  height: 18px;
+  max-width: none;
+  max-height: none;
+  display: block;
+}
+
+.site-header .theme-dropdown {
+  width: 190px;
+  min-width: 190px;
+  max-width: 190px;
+  padding: 0.4rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.site-header .theme-dropdown-item {
+  width: 100%;
+  min-width: 0;
+  min-height: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 0 0.7rem;
+  margin: 0;
+  gap: 0.65rem;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.site-header .theme-item-icon {
+  width: 16px;
+  min-width: 16px;
+  height: 16px;
+  max-width: none;
+  flex: 0 0 16px;
+}
+
+.site-header .theme-item-text {
+  min-width: 0;
+  flex: 1 1 auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.site-header .theme-check-icon {
+  width: 14px;
+  min-width: 14px;
+  height: 14px;
+  max-width: none;
+  flex: 0 0 14px;
+}
+
+.site-header .mobile-menu-btn {
+  flex: 0 0 28px;
+  width: 28px;
+  min-width: 28px;
+  height: 24px;
+  min-height: 24px;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+}
+
+.hero-buttons .btn,
+.cta-banner .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-height: 44px;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+.btn-signin-secondary {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  min-width: 130px;
+  padding: 0.65rem 1.15rem;
+  line-height: 1.15;
+  white-space: nowrap;
+  flex: 0 0 auto;
+  overflow: hidden;
+}
+
+.btn-signin-secondary .portal-icon,
+.btn-signin-secondary .portal-arrow {
+  flex: 0 0 auto;
+}
+
+.btn-signin-secondary span:not(.portal-icon):not(.portal-arrow) {
+  display: inline-block;
+  line-height: 1.15;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .desktop-nav {
+    gap: 1rem;
+  }
+
+  .site-header .header-actions {
+    gap: 0.5rem;
+  }
+
+  .site-header .header-actions > .btn {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header .header-actions {
+    gap: 0.5rem;
+  }
+
+  .site-header .header-actions .hide-on-mobile {
+    display: none;
+  }
+
+  .site-header .theme-dropdown {
+    right: -4px;
+  }
+
+  .hero-buttons .btn {
+    min-height: 46px;
+  }
+
+  .btn-signin-secondary {
+    min-height: 46px;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header .header-actions {
+    gap: 0.4rem;
+  }
+
+  .site-header .header-actions > .btn {
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    font-size: 0.82rem;
+  }
+
+  .site-header .theme-toggle-btn {
+    width: 38px;
+    min-width: 38px;
+    max-width: 38px;
+    height: 38px;
+    min-height: 38px;
+    max-height: 38px;
+    flex-basis: 38px;
+  }
+
+  .site-header .theme-selector {
+    width: 38px;
+    height: 38px;
+  }
+
+  .site-header .theme-dropdown {
+    width: 185px;
+    min-width: 185px;
+    max-width: 185px;
+  }
+
+  .btn-signin-secondary {
+    width: 100%;
+    min-width: 0;
+  }
+}
