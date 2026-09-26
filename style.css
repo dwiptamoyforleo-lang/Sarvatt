@@ -715,10 +715,71 @@ button {
 }
 
 .feature-icon {
-  font-size: 2rem;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 1.25rem;
-  display: inline-block;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  flex-shrink: 0;
 }
+
+.feature-icon svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.feature-card:hover .feature-icon,
+.card:hover .feature-icon {
+  transform: scale(1.08);
+}
+
+/* Color Accent System for Custom Icons */
+.icon-box-blue {
+  background: rgba(59, 130, 246, 0.12);
+  color: #3b82f6;
+  border: 1px solid rgba(59, 130, 246, 0.25);
+}
+
+.icon-box-cyan {
+  background: rgba(6, 182, 212, 0.12);
+  color: #06b6d4;
+  border: 1px solid rgba(6, 182, 212, 0.25);
+}
+
+.icon-box-emerald {
+  background: rgba(16, 185, 129, 0.12);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.icon-box-purple {
+  background: rgba(139, 92, 246, 0.12);
+  color: #8b5cf6;
+  border: 1px solid rgba(139, 92, 246, 0.25);
+}
+
+.icon-box-amber {
+  background: rgba(245, 158, 11, 0.12);
+  color: #f59e0b;
+  border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+.icon-box-rose {
+  background: rgba(244, 63, 94, 0.12);
+  color: #f43f5e;
+  border: 1px solid rgba(244, 63, 94, 0.25);
+}
+
+.icon-box-indigo {
+  background: rgba(99, 102, 241, 0.12);
+  color: #6366f1;
+  border: 1px solid rgba(99, 102, 241, 0.25);
+}
+
 
 .feature-title {
   font-family: var(--font-heading);
@@ -887,7 +948,18 @@ button {
 .bg-gradient-3 { background: linear-gradient(135deg, #6d28d9 0%, #0f172a 100%); }
 
 .thumbnail-icon {
-  font-size: 3.5rem;
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thumbnail-icon svg {
+  width: 52px;
+  height: 52px;
+  display: block;
+  filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.35));
 }
 
 .zoom-badge {
@@ -901,7 +973,17 @@ button {
   padding: 0.35rem 0.75rem;
   border-radius: var(--radius-full);
   backdrop-filter: blur(4px);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
 }
+
+.zoom-badge svg {
+  width: 13px;
+  height: 13px;
+  display: block;
+}
+
 
 .showcase-info {
   padding: 1.5rem;
@@ -947,11 +1029,22 @@ button {
 }
 
 .rating-stars {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
   color: #f59e0b;
-  font-size: 1rem;
   margin-bottom: 1rem;
-  letter-spacing: 2px;
 }
+
+.star-svg {
+  width: 16px;
+  height: 16px;
+  color: #f59e0b;
+  fill: #f59e0b;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
 
 .testimonial-quote {
   font-size: 0.95rem;
@@ -1019,9 +1112,22 @@ button {
 }
 
 .entry-icon {
-  font-size: 1.3rem;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
   margin-top: 2px;
 }
+
+.entry-icon svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
 
 .entry-label {
   display: block;
@@ -1088,18 +1194,23 @@ button {
 }
 
 .success-icon {
-  width: 48px;
-  height: 48px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   background-color: rgba(16, 185, 129, 0.2);
   color: var(--color-success);
-  font-size: 1.5rem;
-  font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 1rem auto;
 }
+
+.success-icon svg {
+  width: 26px;
+  height: 26px;
+  display: block;
+}
+
 
 .contact-success-box h4 {
   font-family: var(--font-heading);
@@ -1493,10 +1604,27 @@ button {
   transition: var(--theme-transition);
 }
 
-.lightbox-icon-wrap {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
+.lightbox-icon-wrap,
+.lightbox-icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 1.25rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-lg);
+  background: var(--bg-surface-alt);
+  border: 1px solid var(--border-color);
+  color: var(--color-primary);
 }
+
+.lightbox-icon-wrap svg,
+.lightbox-icon svg {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
 
 .lightbox-title {
   font-family: var(--font-heading);
@@ -1767,9 +1895,15 @@ button {
   height: 22px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.2);
-  font-size: 0.75rem;
   line-height: 1;
 }
+
+.btn-signin-secondary .portal-icon svg {
+  width: 13px;
+  height: 13px;
+  display: block;
+}
+
 
 .btn-signin-secondary .portal-arrow {
   display: inline-block;
@@ -1912,9 +2046,15 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.35rem;
   flex-shrink: 0;
 }
+
+.action-card-icon svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
 
 .action-card-title {
   font-family: var(--font-heading);
@@ -1997,9 +2137,15 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
   flex-shrink: 0;
 }
+
+.why-icon-box svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
 
 .why-body h4 {
   font-family: var(--font-heading);
