@@ -1,200 +1,169 @@
 /**
- * Sārvatt - Best Gujarati Restaurant
- * Interactive JavaScript for Navigation, Lightbox, Form Validation & Experience
+ * Modern Website Starter JavaScript
+ * Clean, lightweight, modular event handling and UI interactions
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  initLightbox();
+  initStickyHeader();
+  initMobileMenu();
   initScrollSpy();
+  initLightbox();
   initDynamicYear();
-  initVideoInteractions();
 });
 
 /* ==========================================================================
-   INTERACTIVE GALLERY LIGHTBOX
+   1. STICKY HEADER ELEVATION
    ========================================================================== */
-function initLightbox() {
-  const modal = document.getElementById('lightbox-modal');
-  const imgEl = document.getElementById('lightbox-img');
-  const captionEl = document.getElementById('lightbox-caption');
-  const closeBtn = document.getElementById('lightbox-close');
-  const prevBtn = document.getElementById('lightbox-prev');
-  const nextBtn = document.getElementById('lightbox-next');
+function initStickyHeader() {
+  const header = document.getElementById('site-header');
+  if (!header) return;
 
-  if (!modal || !imgEl || !captionEl) return;
-
-  const triggers = Array.from(document.querySelectorAll('[data-lightbox]'));
-  let currentIndex = 0;
-
-  function showImage(index) {
-    if (index < 0) index = triggers.length - 1;
-    if (index >= triggers.length) index = 0;
-    currentIndex = index;
-
-    const targetTrigger = triggers[currentIndex];
-    const src = targetTrigger.getAttribute('data-lightbox');
-    const caption = targetTrigger.getAttribute('data-caption') || '';
-
-    imgEl.src = src;
-    captionEl.textContent = caption;
-  }
-
-  function openLightbox(index) {
-    showImage(index);
-    modal.classList.add('active');
-    modal.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeLightbox() {
-    modal.classList.remove('active');
-    modal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-  }
-
-  triggers.forEach((trigger, idx) => {
-    trigger.addEventListener('click', () => {
-      openLightbox(idx);
-    });
-  });
-
-  if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
-  if (prevBtn) prevBtn.addEventListener('click', () => showImage(currentIndex - 1));
-  if (nextBtn) nextBtn.addEventListener('click', () => showImage(currentIndex + 1));
-
-  // Background click to close
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      closeLightbox();
+  const handleScroll = () => {
+    if (window.scrollY > 20) {
+      header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.08)';
+    } else {
+      header.style.boxShadow = 'none';
     }
-  });
+  };
 
-  // Keyboard navigation
-  document.addEventListener('keydown', (e) => {
-    if (!modal.classList.contains('active')) return;
-    if (e.key === 'Escape') closeLightbox();
-    if (e.key === 'ArrowLeft') showImage(currentIndex - 1);
-    if (e.key === 'ArrowRight') showImage(currentIndex + 1);
-  });
-
-  // Touch Swipe navigation for mobile
-  let touchStartX = 0;
-  let touchEndX = 0;
-
-  modal.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-  }, { passive: true });
-
-  modal.addEventListener('touchend', (e) => {
-    touchEndX = e.changedTouches[0].screenX;
-    handleSwipe();
-  }, { passive: true });
-
-  function handleSwipe() {
-    const diff = touchEndX - touchStartX;
-    if (Math.abs(diff) > 50) {
-      if (diff > 0) {
-        showImage(currentIndex - 1); // Swipe right -> previous
-      } else {
-        showImage(currentIndex + 1); // Swipe left -> next
-      }
-    }
-  }
+  window.addEventListener('scroll', handleScroll, { passive: true });
 }
 
 /* ==========================================================================
-   SCROLL SPY & STICKY HEADER
+   2. MOBILE MENU DRAWER
+   ========================================================================== */
+function initMobileMenu() {
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const drawer = document.getElementById('mobile-nav-drawer');
+  if (!menuBtn || !drawer) return;
+
+  const toggleMenu = () => {
+    const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+    menuBtn.setAttribute('aria-expanded', String(!isExpanded));
+    drawer.classList.toggle('active');
+    drawer.setAttribute('aria-hidden', String(isExpanded));
+  };
+
+  menuBtn.addEventListener('click', toggleMenu);
+
+  // Close drawer when any mobile link is clicked
+  const mobileLinks = drawer.querySelectorAll('.mobile-nav-link, .btn');
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      menuBtn.setAttribute('aria-expanded', 'false');
+      drawer.classList.remove('active');
+      drawer.setAttribute('aria-hidden', 'true');
+    });
+  });
+}
+
+/* ==========================================================================
+   3. SCROLL SPY & SMOOTH NAVIGATION
    ========================================================================== */
 function initScrollSpy() {
-  const header = document.getElementById('site-header');
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.desktop-nav .nav-link');
+  if (!sections.length || !navLinks.length) return;
 
-  window.addEventListener('scroll', () => {
-    const scrollPos = window.scrollY;
-
-    // Header elevation on scroll
-    if (header) {
-      if (scrollPos > 40) {
-        header.style.boxShadow = '0 6px 20px rgba(0, 0, 0, 0.08)';
-      } else {
-        header.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.04)';
-      }
-    }
-
-    // Active link highlighting
-    sections.forEach(sec => {
-      const top = sec.offsetTop - 120;
-      const height = sec.offsetHeight;
-      const id = sec.getAttribute('id');
-
-      if (scrollPos >= top && scrollPos < top + height) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const currentId = entry.target.getAttribute('id');
         navLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === `#${id}`) {
+          if (link.getAttribute('href') === `#${currentId}`) {
             link.classList.add('active');
+          } else {
+            link.classList.remove('active');
           }
         });
       }
     });
-  }, { passive: true });
+  }, {
+    rootMargin: '-20% 0px -70% 0px'
+  });
+
+  sections.forEach(section => observer.observe(section));
 }
 
 /* ==========================================================================
-   DYNAMIC COPYRIGHT YEAR
+   4. LIGHTBOX / MODAL CONTROLLER
    ========================================================================== */
-function initDynamicYear() {
-  const el = document.getElementById('current-year');
-  if (el) {
-    el.textContent = new Date().getFullYear().toString();
-  }
-}
+function initLightbox() {
+  const modal = document.getElementById('lightbox-modal');
+  const modalTitle = document.getElementById('lightbox-title');
+  const modalCaption = document.getElementById('lightbox-caption');
+  const closeBtn = document.getElementById('lightbox-close');
+  if (!modal) return;
 
-/* ==========================================================================
-   VIDEO PLAYER ENHANCEMENTS
-   ========================================================================== */
-function initVideoInteractions() {
-  const player = document.getElementById('sarvatt-video-player');
-  if (!player) return;
+  const triggers = document.querySelectorAll('[data-lightbox]');
 
-  // Autoplay pause when scrolled out of view to preserve resources
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting && !player.paused) {
-        player.pause();
-      }
+  const openModal = (title, desc) => {
+    if (modalTitle) modalTitle.textContent = title;
+    if (modalCaption) modalCaption.textContent = desc;
+    modal.classList.add('active');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeModal = () => {
+    modal.classList.remove('active');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+
+  triggers.forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const title = trigger.getAttribute('data-title') || 'Feature Preview';
+      const desc = trigger.getAttribute('data-desc') || 'Expanded view of the selected component.';
+      openModal(title, desc);
     });
-  }, { threshold: 0.3 });
+  });
 
-  observer.observe(player);
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeModal);
+  }
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+      closeModal();
+    }
+  });
 }
 
 /* ==========================================================================
-   RESERVATION FORM SUBMISSION SIMULATION
+   5. CONTACT FORM HANDLER
    ========================================================================== */
-window.handleReservationSubmit = function(form) {
-  const name = form.name.value;
-  const guests = form.guests.value;
-  const date = form.date.value;
-  const time = form.time.value;
-
-  const formCard = document.getElementById('reservation-form');
-  const successBox = document.getElementById('reservation-success-box');
-  const messageText = document.getElementById('success-message-text');
-
-  if (formCard && successBox && messageText) {
+window.handleContactSubmit = function(form) {
+  const formCard = document.getElementById('contact-form');
+  const successBox = document.getElementById('contact-success-box');
+  if (formCard && successBox) {
     formCard.style.display = 'none';
     successBox.style.display = 'block';
-    messageText.textContent = `A table request for ${name} (${guests} Guests on ${date} for ${time}) has been registered with Sārvatt dining concierge at Hyatt Regency Ahmedabad. You will receive an immediate confirmation SMS and call.`;
   }
 };
 
-window.resetReservationForm = function() {
-  const formCard = document.getElementById('reservation-form');
-  const successBox = document.getElementById('reservation-success-box');
+window.resetContactForm = function() {
+  const formCard = document.getElementById('contact-form');
+  const successBox = document.getElementById('contact-success-box');
   if (formCard && successBox) {
     formCard.reset();
     formCard.style.display = 'flex';
     successBox.style.display = 'none';
   }
 };
+
+/* ==========================================================================
+   6. DYNAMIC CURRENT YEAR
+   ========================================================================== */
+function initDynamicYear() {
+  const yearEl = document.getElementById('current-year');
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear().toString();
+  }
+}

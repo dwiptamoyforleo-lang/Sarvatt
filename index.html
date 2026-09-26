@@ -3,1753 +3,566 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sarvatt - Best Gujarati Restaurant | Hyatt Regency Ahmedabad</title>
-  <meta name="description" content="Sārvatt - Best Gujarati Restaurant. An experiential Gujarati dining journey inspired by the culinary traditions of Gujarat and Rajasthan at Hyatt Regency Ahmedabad.">
+  <title>Modern Website Starter</title>
+  <meta name="description" content="A clean, responsive, and modern website boilerplate with semantic structure, modular styling, and interactive components.">
   
   <!-- OpenGraph Metadata -->
-  <meta property="og:title" content="Sarvatt - Best Gujarati Restaurant">
-  <meta property="og:description" content="Sārvatt - Best Gujarati Restaurant. An experiential Gujarati dining journey inspired by the culinary traditions of Gujarat and Rajasthan at Hyatt Regency Ahmedabad.">
-  <meta property="og:type" content="restaurant">
-  <meta property="og:url" content="https://maps.app.goo.gl/8dhq83QAuUNSXTdN8">
-  
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23cfa036'>🌿</text></svg>">
+  <meta property="og:title" content="Modern Website Starter">
+  <meta property="og:description" content="A clean, responsive, and modern website boilerplate with semantic structure, modular styling, and interactive components.">
+  <meta property="og:type" content="website">
 
-  <!-- Google Fonts: Cormorant Garamond, Marcellus, Plus Jakarta Sans -->
+  <!-- Google Fonts Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Marcellus&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
-
-  <!-- Schema.org Structured Data (Restaurant & Cuisine) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Restaurant",
-    "name": "Sārvatt",
-    "alternateName": "Sarvatt - Best Gujarati Restaurant",
-    "description": "An experiential Gujarati dining journey inspired by the culinary traditions of Gujarat and Rajasthan, located on the Second Floor of Hyatt Regency Ahmedabad.",
-    "image": "assets/images/Screenshot_20260925_063720_Gallery.jpg",
-    "url": "https://maps.app.goo.gl/8dhq83QAuUNSXTdN8",
-    "telephone": "+917574826620",
-    "servesCuisine": [
-      "Gujarati",
-      "Rajasthani",
-      "Indian",
-      "Vegetarian",
-      "Jain",
-      "Street Food & Farsaan"
-    ],
-    "priceRange": "₹₹₹",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Second Floor, Hyatt Regency Ahmedabad, 17/A Ashram Road, Near Sabarmati Riverfront, Usmanpura",
-      "addressLocality": "Ahmedabad",
-      "addressRegion": "Gujarat",
-      "postalCode": "380014",
-      "addressCountry": "IN"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 23.0449,
-      "longitude": 72.5714
-    },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-        "opens": "12:30",
-        "closes": "14:30"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-        "opens": "19:00",
-        "closes": "22:30"
-      }
-    ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "107"
-    },
-    "hasMenu": "https://www.hyatt.com/content/dam/hotel/propertysites/assets/regency/amdhr/documents/en_US/dining/sarvatt/Sarvatt-Restaurant-Menu.pdf"
-  }
-  </script>
 </head>
 <body>
 
-  <!-- Top Announcement Bar -->
-  <div class="top-announcement-bar">
-    <div class="container announcement-inner">
-      <div class="announcement-item">
-        <span class="golden-dot"></span>
-        <span>Located at <strong>Hyatt Regency Ahmedabad</strong> · Second Floor, Ashram Road</span>
-      </div>
-      <div class="announcement-item hide-on-mobile">
-        <span class="leaf-icon-mini">🌿</span>
-        <span>Vegetarian &amp; Jain Dining · <strong>Sattvik Certified</strong> Facility</span>
-      </div>
-      <div class="announcement-actions">
-        <a href="https://maps.app.goo.gl/8dhq83QAuUNSXTdN8" target="_blank" rel="noopener noreferrer" class="top-maps-link">
-          <svg class="top-maps-icon" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-          </svg>
-          <span>View in Google Maps</span>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Primary Navigation (Clean & Streamlined) -->
+  <!-- ==========================================================================
+       SITE HEADER & NAVIGATION
+       ========================================================================== -->
   <header class="site-header" id="site-header">
     <div class="container header-container">
-      <!-- Restaurant Logo -->
-      <a href="#hero" class="brand-logo" aria-label="Sārvatt Home">
-        <div class="logo-leaf-mark">
-          <svg viewBox="0 0 40 40" class="leaf-svg" aria-hidden="true">
-            <path d="M20 38 Q20 20 20 6" stroke="#cfa036" stroke-width="2" fill="none"/>
-            <path d="M20 4 C16 10 16 18 20 23 C24 18 24 10 20 4 Z" fill="#cfa036"/>
-            <path d="M19 14 C12 11 8 18 14 22 C18 21 19 18 19 14 Z" fill="#cfa036"/>
-            <path d="M21 14 C28 11 32 18 26 22 C22 21 21 18 21 14 Z" fill="#cfa036"/>
-            <path d="M19 23 C11 22 8 30 15 33 C18 30 19 26 19 23 Z" fill="#cfa036"/>
-            <path d="M21 23 C29 22 32 30 25 33 C22 30 21 26 21 23 Z" fill="#cfa036"/>
-          </svg>
-        </div>
-        <div class="brand-text">
-          <span class="brand-name">Sārvatt</span>
-          <span class="brand-tagline">Best Gujarati Restaurant</span>
-        </div>
+      <!-- Brand / Logo -->
+      <a href="#hero" class="brand-logo" aria-label="Home">
+        <span class="brand-symbol">◈</span>
+        <span class="brand-name">BrandName</span>
       </a>
 
-      <!-- Desktop Nav Menu -->
+      <!-- Desktop Navigation Menu -->
       <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="#features" class="nav-link">Features</a>
         <a href="#about" class="nav-link">About</a>
-        <a href="#cuisine" class="nav-link">Cuisine</a>
-        <a href="#experiences" class="nav-link">Experiences</a>
-        <a href="#journey" class="nav-link">Journey</a>
-        <a href="#gallery" class="nav-link">Gallery</a>
-        <a href="#video" class="nav-link">Video</a>
-        <a href="#drinks" class="nav-link">Drinks</a>
-        <a href="#menu-pdf" class="nav-link">Menu</a>
-        <a href="#reviews" class="nav-link">Reviews</a>
-        <a href="#hours" class="nav-link">Hours</a>
-        <a href="#location" class="nav-link">Location</a>
+        <a href="#showcase" class="nav-link">Showcase</a>
+        <a href="#testimonials" class="nav-link">Testimonials</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
 
       <!-- Header Action Buttons -->
       <div class="header-actions">
-        <a href="https://maps.app.goo.gl/8dhq83QAuUNSXTdN8" target="_blank" rel="noopener noreferrer" class="btn btn-maps-sm" title="View Sārvatt in Google Maps">
-          <svg class="maps-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
-            <path fill="#EA4335" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-            <path fill="#4285F4" d="M12 2C10.5 2 9 2.5 8 3.5l4 9.5 4-9.5c-1-1-2.5-1.5-4-1.5z"/>
-            <path fill="#FBBC05" d="M8 3.5C6.2 5 5 7 5 9c0 2.5 1.5 5.5 3 8l4-8-4-9z"/>
-            <circle fill="#FFFFFF" cx="12" cy="9" r="2.8"/>
-            <circle fill="#B31412" cx="12" cy="9" r="1.5"/>
-          </svg>
-          <span>Google Maps</span>
-        </a>
-        <a href="#contact" class="btn btn-gold-sm">Reserve</a>
+        <a href="#contact" class="btn btn-outline btn-sm hide-on-mobile">Sign In</a>
+        <a href="#contact" class="btn btn-primary btn-sm">Get Started</a>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-hidden="true">
+      <nav class="mobile-nav-links">
+        <a href="#features" class="mobile-nav-link">Features</a>
+        <a href="#about" class="mobile-nav-link">About</a>
+        <a href="#showcase" class="mobile-nav-link">Showcase</a>
+        <a href="#testimonials" class="mobile-nav-link">Testimonials</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+      </nav>
+      <div class="mobile-nav-cta">
+        <a href="#contact" class="btn btn-primary" style="width: 100%; text-align: center;">Get Started</a>
       </div>
     </div>
   </header>
 
-  <!-- 1. TOP / HERO SECTION -->
-  <section class="hero-section" id="hero">
-    <div class="hero-background-wrapper">
-      <div class="hero-image-crop photo-crop-wrapper">
-        <img 
-          src="assets/images/Screenshot_20260925_063020_Maps.jpg" 
-          alt="Sārvatt Restaurant Dining Sanctum at Hyatt Regency Ahmedabad with Warm Pendant Lighting" 
-          class="hero-img photo-crop-img"
-        >
-      </div>
-      <div class="hero-overlay-gradient"></div>
-    </div>
-
-    <div class="container hero-content-container">
-      <div class="hero-inner-content">
-        <!-- Botanical Leaf Mark -->
-        <div class="hero-emblem-badge">
-          <svg viewBox="0 0 40 40" class="hero-leaf-svg" aria-hidden="true">
-            <path d="M20 38 Q20 20 20 6" stroke="#e5b842" stroke-width="2.5" fill="none"/>
-            <path d="M20 4 C16 10 16 18 20 23 C24 18 24 10 20 4 Z" fill="#e5b842"/>
-            <path d="M19 14 C12 11 8 18 14 22 C18 21 19 18 19 14 Z" fill="#e5b842"/>
-            <path d="M21 14 C28 11 32 18 26 22 C22 21 21 18 21 14 Z" fill="#e5b842"/>
-            <path d="M19 23 C11 22 8 30 15 33 C18 30 19 26 19 23 Z" fill="#e5b842"/>
-            <path d="M21 23 C29 22 32 30 25 33 C22 30 21 26 21 23 Z" fill="#e5b842"/>
-          </svg>
-          <span class="hero-subtext-journey">Hyatt Regency Ahmedabad · Second Floor</span>
-        </div>
-
-        <h1 class="hero-title">
-          <span class="hero-title-main">Sārvatt</span>
-          <span class="hero-title-sub">Best Gujarati Restaurant</span>
-        </h1>
-
-        <!-- Decorative Divider -->
-        <div class="hero-divider">
-          <span class="divider-line"></span>
-          <span class="divider-node">✦</span>
-          <span class="divider-line"></span>
-        </div>
-
-        <p class="hero-description">
-          An experiential Gujarati dining journey inspired by the culinary traditions of Gujarat and Rajasthan.
-        </p>
-
-        <!-- Main Action Buttons -->
-        <div class="hero-buttons-group">
-          <!-- Google Maps Button (MANDATORY EXACT URL) -->
-          <a href="https://maps.app.goo.gl/8dhq83QAuUNSXTdN8" target="_blank" rel="noopener noreferrer" class="btn btn-maps-hero" id="hero-maps-btn">
-            <svg class="maps-icon-lg" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-              <path fill="#EA4335" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-              <path fill="#4285F4" d="M12 2C10.5 2 9 2.5 8 3.5l4 9.5 4-9.5c-1-1-2.5-1.5-4-1.5z"/>
-              <path fill="#FBBC05" d="M8 3.5C6.2 5 5 7 5 9c0 2.5 1.5 5.5 3 8l4-8-4-9z"/>
-              <circle fill="#FFFFFF" cx="12" cy="9" r="3"/>
-              <circle fill="#B31412" cx="12" cy="9" r="1.6"/>
-            </svg>
-            <span>View in Google Maps</span>
-          </a>
-
-          <!-- View Menu Button -->
-          <a href="#menu-pdf" class="btn btn-gold-hero">
-            <span>View Menu</span>
-          </a>
-
-          <!-- Contact Us Button -->
-          <a href="#contact" class="btn btn-outline-hero">
-            <span>Contact Us</span>
-          </a>
-
-          <!-- Delivery / Order Button -->
-          <a href="#delivery" class="btn btn-outline-hero">
-            <span>Delivery / Order</span>
-          </a>
-        </div>
-
-        <!-- 21. Location Path Visual Breadcrumb -->
-        <div class="hero-location-path">
-          <span class="path-node">Ahmedabad</span>
-          <span class="path-arrow">→</span>
-          <span class="path-node">Ashram Road</span>
-          <span class="path-arrow">→</span>
-          <span class="path-node">Near Sabarmati Riverfront</span>
-          <span class="path-arrow">→</span>
-          <span class="path-node">Hyatt Regency Ahmedabad</span>
-          <span class="path-arrow">→</span>
-          <span class="path-node">Second Floor</span>
-          <span class="path-arrow">→</span>
-          <span class="path-node highlight-path">Sārvatt</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 2. ABOUT SĀRVATT -->
-  <section class="section about-section" id="about">
-    <div class="container">
-      <div class="section-header text-center">
-        <span class="section-tagline">Experiential Dining Concept</span>
-        <h2 class="section-title">A Journey Through Gujarat</h2>
-        <div class="section-rule"><span>🌿</span></div>
-        <p class="section-subtitle">
-          The name <strong>Sārvatt</strong> originates from a Sanskrit word meaning &ldquo;precious&rdquo;—reflecting a cherished gastronomic encounter that transcends a conventional thali meal.
-        </p>
-      </div>
-
-      <div class="about-grid">
-        <div class="about-text-column">
-          <p class="about-lead">
-            Sārvatt is an experiential Gujarati restaurant whose concept incorporates the rich culinary traditions of <strong>Gujarat and Rajasthan</strong>.
-          </p>
-          <p class="about-paragraph">
-            Rather than serving a single hurried plate, Sārvatt's menu draws inspiration from the diverse regional legacies of western India:
-          </p>
-
-          <!-- Regional Traditions Cards -->
-          <div class="regional-cards-grid">
-            <div class="region-pill">
-              <span class="region-dot"></span>
-              <strong>Kathiawar</strong>
-              <span class="region-desc">Hearty, rustic earthenware and smoked flavours</span>
-            </div>
-            <div class="region-pill">
-              <span class="region-dot"></span>
-              <strong>Kutch</strong>
-              <span class="region-desc">Desert-inspired savouries and artisanal flatbreads</span>
-            </div>
-            <div class="region-pill">
-              <span class="region-dot"></span>
-              <strong>Surat</strong>
-              <span class="region-desc">Famed confectionery, tender steamed farsan, and subtle sweetness</span>
-            </div>
-            <div class="region-pill">
-              <span class="region-dot"></span>
-              <strong>Saurashtra</strong>
-              <span class="region-desc">Golden khichdi, rich kadhi, and royal hospitality</span>
-            </div>
-            <div class="region-pill">
-              <span class="region-dot"></span>
-              <strong>Rajasthan</strong>
-              <span class="region-desc">Distinctive royal spices, traditional sweets, and botanical notes</span>
-            </div>
-          </div>
-
-          <p class="about-paragraph mt-4">
-            The culinary concept deliberately moves beyond a conventional Gujarati thali by focusing on:
-          </p>
-
-          <!-- Core Pillars -->
-          <div class="about-pillars-grid">
-            <div class="pillar-card">
-              <span class="pillar-icon">📖</span>
-              <h4>Storytelling</h4>
-              <p>Each course is narrated tableside by staff to share its cultural heritage and ancestral roots.</p>
-            </div>
-            <div class="pillar-card">
-              <span class="pillar-icon">🏺</span>
-              <h4>Regional Traditions</h4>
-              <p>Honouring traditional western Indian recipes passed down through generations.</p>
-            </div>
-            <div class="pillar-card">
-              <span class="pillar-icon">✨</span>
-              <h4>Presentation &amp; Craft</h4>
-              <p>Contemporary presentation of traditional influences in brass, silver, and copper ware.</p>
-            </div>
-            <div class="pillar-card">
-              <span class="pillar-icon">🙏</span>
-              <h4>Warm Hospitality</h4>
-              <p>Attentive, personalized service embodying the timeless Indian ethos of Atithi Devo Bhava.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right: Photographic Presentation -->
-        <div class="about-media-column">
-          <div class="about-card-featured">
-            <div class="about-img-frame photo-crop-wrapper" data-lightbox="assets/images/Screenshot_20260925_063720_Gallery.jpg" data-caption="The Sārvatt Journey - Official Title and Visual Motif at Hyatt Regency Ahmedabad">
-              <img 
-                src="assets/images/Screenshot_20260925_063720_Gallery.jpg" 
-                alt="The Sārvatt Journey Title Motif and Amber Lantern Ambiance" 
-                class="photo-crop-img cursor-zoom"
-              >
-              <div class="img-zoom-badge">🔍 Click to Expand</div>
-            </div>
-            <div class="about-card-caption">
-              <span class="caption-title">The Sārvatt Journey</span>
-              <span class="caption-sub">Hyatt Regency Ahmedabad · Second Floor</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 3. CUISINE -->
-  <section class="section cuisine-section" id="cuisine">
-    <div class="container">
-      <div class="section-header text-center">
-        <span class="section-tagline">Culinary Heritage</span>
-        <h2 class="section-title">The Flavours of Western India</h2>
-        <div class="section-rule"><span>✦</span></div>
-        <p class="section-subtitle">
-          Sārvatt is a dedicated <strong>vegetarian restaurant</strong>. Vegetarian and Jain standards are a cornerstone of its culinary identity, ensuring purity without compromising on gastronomic depth.
-        </p>
-      </div>
-
-      <!-- Cuisine Category Cards / Tags -->
-      <div class="cuisine-tags-grid">
-        <div class="cuisine-card">
-          <span class="cuisine-icon">🌾</span>
-          <h3>Gujarati</h3>
-          <p>Authentic Kathiawadi, Surti, and Kutchi delicacies balancing sweet, salty, and spicy undertones.</p>
-        </div>
-        <div class="cuisine-card">
-          <span class="cuisine-icon">👑</span>
-          <h3>Rajasthani</h3>
-          <p>Royal western Indian culinary influences highlighting desert herbs and festive confections.</p>
-        </div>
-        <div class="cuisine-card">
-          <span class="cuisine-icon">🇮🇳</span>
-          <h3>Indian</h3>
-          <p>Celebration of subcontinental vegetarian artistry, indigenous grains, and fragrant spices.</p>
-        </div>
-        <div class="cuisine-card highlight-cuisine">
-          <span class="cuisine-icon">🌿</span>
-          <h3>Vegetarian</h3>
-          <p>100% pure vegetarian dining facility with strict ingredient traceability and revered culinary craft.</p>
-        </div>
-        <div class="cuisine-card highlight-cuisine">
-          <span class="cuisine-icon">🌱</span>
-          <h3>Vegan Options</h3>
-          <p>Thoughtfully crafted plant-based preparations celebrating legumes, seasonal greens, and cold-pressed oils.</p>
-        </div>
-        <div class="cuisine-card">
-          <span class="cuisine-icon">🫓</span>
-          <h3>Street Food &amp; Farsaan</h3>
-          <p>Steamed and fried savouries, crisp fafda, chakri, hand-rolled khandvi, and deconstructed chaat.</p>
-        </div>
-        <div class="cuisine-card">
-          <span class="cuisine-icon">🍯</span>
-          <h3>Desserts</h3>
-          <p>Artisanal halwas with gold vark, berry-topped shrikhand tartlets, basundi, and delicate confections.</p>
-        </div>
-        <div class="cuisine-card">
-          <span class="cuisine-icon">🍹</span>
-          <h3>Regional Beverages</h3>
-          <p>Indigenous botanical refreshments including Kokum Sharbat, spiced Aam Panna, and herbal paan elixirs.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4. SATTVIK CERTIFICATION -->
-  <section class="section sattvik-section" id="sattvik">
-    <div class="container">
-      <div class="sattvik-card-box">
-        <div class="sattvik-badge-icon">🌿</div>
-        <div class="sattvik-content">
-          <span class="sattvik-tagline">Dietary Purity Verification</span>
-          <h2 class="sattvik-title">Sattvik Certified</h2>
-          <div class="sattvik-rule"></div>
-          <p class="sattvik-text">
-            In December 2023, Sārvatt was reported as having received certification from the <strong>Sattvik Council of India</strong> after its production facility was evaluated for conformity with traditional vegetarian and Jain dietary practices.
-          </p>
-          <p class="sattvik-subtext">
-            Additionally, Sattvik Certifications has reported that Sārvatt completed a fourth consecutive annual certification audit, underscoring its enduring adherence to verified vegetarian and Jain culinary standards.
-          </p>
-          <div class="sattvik-footer-note">
-            <span>Evaluation of Vegetarian / Jain Standards · Sattvik Council of India Verified</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5. THE SĀRVATT EXPERIENCE -->
-  <section class="section experiences-section" id="experiences">
-    <div class="container">
-      <div class="section-header text-center">
-        <span class="section-tagline">Curated Tasting Journeys</span>
-        <h2 class="section-title">The Sārvatt Experience</h2>
-        <div class="section-rule"><span>📜</span></div>
-        <p class="section-subtitle">
-          Dining at Sārvatt is structured as an intentional culinary journey rather than simply ordering a conventional meal. Select your preferred sequence below.
-        </p>
-      </div>
-
-      <div class="experience-plans-grid">
-        <!-- Plan 1: Aboli -->
-        <div class="plan-card">
-          <div class="plan-header">
-            <span class="plan-type">Tasting Sequence</span>
-            <h3 class="plan-name">Aboli</h3>
-            <p class="plan-sub">4-Course Meal</p>
-          </div>
-          <div class="plan-body">
-            <p class="plan-description">
-              A curated introduction to Sārvatt’s seasonal farsan, regional main course, comforting grains, and dessert.
-            </p>
-            <ul class="plan-highlights">
-              <li><span>✦</span> Handcrafted Welcome Snack Course</li>
-              <li><span>✦</span> Regional Savoury / Farsan Course</li>
-              <li><span>✦</span> Main Entrée with Artisanal Breads</li>
-              <li><span>✦</span> Signature Sweet Dish</li>
-            </ul>
-          </div>
-          <div class="plan-footer">
-            <span class="plan-note">Inquire for current seasonal pricing</span>
-            <a href="#contact" class="btn btn-outline-block">Inquire / Reserve</a>
-          </div>
-        </div>
-
-        <!-- Plan 2: Kaner -->
-        <div class="plan-card highlight-plan">
-          <div class="plan-pill-popular">Popular Selection</div>
-          <div class="plan-header">
-            <span class="plan-type">Culinary Journey</span>
-            <h3 class="plan-name">Kaner</h3>
-            <p class="plan-sub">7-Stage Culinary Journey</p>
-          </div>
-          <div class="plan-pricing">
-            <span class="currency-symbol">₹</span>
-            <span class="price-amount">1,800</span>
-            <span class="price-tax-label">per guest*</span>
-          </div>
-          <div class="plan-body">
-            <p class="plan-description">
-              A seven-stage exploration across western India’s savouries, palate cleansers, regional entrées, and confectionery.
-            </p>
-            <ul class="plan-highlights">
-              <li><span>✦</span> Indigenous Botanical Welcome Refreshment</li>
-              <li><span>✦</span> Naashta Pitara Heirloom Dry Snacks</li>
-              <li><span>✦</span> Steamed &amp; Crisp Farsan Minaar</li>
-              <li><span>✦</span> Artisanal Street Chaat Course</li>
-              <li><span>✦</span> Frozen Entremets Palate Cleanser</li>
-              <li><span>✦</span> Roti Thaal &amp; Main Seasonal Curries</li>
-              <li><span>✦</span> Mishthaan Thaal &amp; Aromatic Mukhwas</li>
-            </ul>
-          </div>
-          <div class="plan-footer">
-            <span class="plan-note">*Currently published menu price (before taxes)</span>
-            <a href="#contact" class="btn btn-gold-block">Reserve Kaner Experience</a>
-          </div>
-        </div>
-
-        <!-- Plan 3: Aakdo -->
-        <div class="plan-card grand-plan">
-          <div class="plan-pill-grand">Signature Grand Journey</div>
-          <div class="plan-header">
-            <span class="plan-type">Culinary Journey</span>
-            <h3 class="plan-name">Aakdo</h3>
-            <p class="plan-sub">9-Stage Culinary Journey</p>
-          </div>
-          <div class="plan-pricing">
-            <span class="currency-symbol">₹</span>
-            <span class="price-amount">2,400</span>
-            <span class="price-tax-label">per guest*</span>
-          </div>
-          <div class="plan-body">
-            <p class="plan-description">
-              The complete, immersive gastronomic odyssey encompassing all nine sequential stages from heirloom snacks to the golden scale dessert.
-            </p>
-            <ul class="plan-highlights">
-              <li><span>✦</span> All 9 Master Stages of the Sārvatt Sequence</li>
-              <li><span>✦</span> Naashta Pitara, Farsaan Minar &amp; Chaat</li>
-              <li><span>✦</span> Brass Steam Baksa &amp; Frozen Entremets</li>
-              <li><span>✦</span> Roti Thaal with Millet Rotla &amp; Puran Poli</li>
-              <li><span>✦</span> Signature Vaghareli Khichdi &amp; Kadhi with Ghee</li>
-              <li><span>✦</span> Royal Mishthaan Platter with Miniature Tarazu</li>
-              <li><span>✦</span> Traditional Botanical Mukhwas</li>
-            </ul>
-          </div>
-          <div class="plan-footer">
-            <span class="plan-note">*Currently published menu price (before taxes)</span>
-            <a href="#contact" class="btn btn-gold-block">Reserve Aakdo Experience</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Mandatory Pricing Disclaimers -->
-      <div class="pricing-disclaimer-box">
-        <p><strong>Pricing &amp; Tax Terms:</strong> Currently published menu prices are shown. Prices are before applicable government taxes.</p>
-        <p><strong>Service Charge Notice:</strong> A 5% service charge is levied. The service charge is discretionary and can be removed on request.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 6. THE CULINARY JOURNEY (TIMELINE) -->
-  <section class="section journey-section" id="journey">
-    <div class="container">
-      <div class="section-header text-center">
-        <span class="section-tagline">Stage-By-Stage Progression</span>
-        <h2 class="section-title">The Culinary Journey</h2>
-        <div class="section-rule"><span>✦</span></div>
-        <p class="section-subtitle">
-          The menu highlights snacks, fried and steamed savouries, indigenous-botanical beverages, palate cleansers, regional entrées, khichdi, kadhi, and a final sweet course.
-        </p>
-      </div>
-
-      <div class="journey-stages-list">
-        <!-- Stage 1: Naashta Pitara -->
-        <div class="journey-stage-row">
-          <div class="stage-media photo-crop-wrapper" data-lightbox="assets/images/Screenshot_20260925_063103_Maps.jpg" data-caption="Stage 1: Naashta Pitara - Handcrafted wooden chest with fafda, chakri, gathiya, and pickle barnis.">
-            <img src="assets/images/Screenshot_20260925_063103_Maps.jpg" alt="Naashta Pitara dry snacks chest" class="photo-crop-img cursor-zoom">
-            <span class="stage-badge">Stage 01</span>
-          </div>
-          <div class="stage-text">
-            <span class="stage-category">Opening Course</span>
-            <h3 class="stage-name">1. Naashta Pitara</h3>
-            <p class="stage-desc">
-              A collection of traditional dry snacks presented in an heirloom wooden chest. Includes hand-coiled spiral chakri, standing crisp fafda, spicy gathiya, and puffed mamra with ceramic barnis of fresh papaya-chili sambharo.
-            </p>
-          </div>
-        </div>
-
-        <!-- Stage 2: Farsaan Minar -->
-        <div class="journey-stage-row reverse-row">
-          <div class="stage-media photo-crop-wrapper" data-lightbox="assets/images/Screenshot_20260925_063720_Gallery.jpg" data-caption="Stage 2: Farsaan Minar - Tiered silver tower with steamed and crisp delicacies.">
-            <img src="assets/images/Screenshot_20260925_063720_Gallery.jpg" alt="Farsaan Minar Savouries" class="photo-crop-img cursor-zoom">
-            <span class="stage-badge">Stage 02</span>
-          </div>
-          <div class="stage-text">
-            <span class="stage-category">Tiered Savouries</span>
-            <h3 class="stage-name">2. Farsaan Minar</h3>
-            <p class="stage-desc">
-              A silver-tiered tower showcasing fresh hot and crisp regional savouries, delicate beetroot cutlets, and fresh mint-coriander and sweet date chutneys.
-            </p>
-          </div>
-        </div>
-
-        <!-- Stage 3: Chaat -->
-        <div class="journey-stage-row">
-          <div class="stage-media photo-crop-wrapper" data-lightbox="assets/images/Screenshot_20260925_063115_Maps.jpg" data-caption="Stage 3: Artisanal Chaat - Presented over a bed of whole sun-dried red chilies.">
-            <img src="assets/images/Screenshot_20260925_063115_Maps.jpg" alt="Artisanal Chaat on sun-dried red chilies" class="photo-crop-img cursor-zoom">
-            <span class="stage-badge">Stage 03</span>
-          </div>
-          <div class="stage-text">
-            <span class="stage-category">Artisanal Street Influence</span>
-            <h3 class="stage-name">3. Chaat</h3>
-            <p class="stage-desc">
-              Deconstructed chaat presented over an aromatic bed of whole sun-dried red chilies in ceramic boat bowls. Layered with whisked yoghurt, golden nylon sev, and ruby pomegranate arils.
-            </p>
-          </div>
-        </div>
-
-        <!-- Stage 4: Steam Baksa -->
-        <div class="journey-stage-row reverse-row">
-          <div class="stage-media photo-crop-wrapper" data-lightbox="assets/images/Screenshot_20260925_063020_Maps.jpg" data-caption="Stage 4: Steam Baksa - Traditional brass canister with steamed dhokla and khandvi.">
-            <img src="assets/images/Screenshot_20260925_063020_Maps.jpg" alt="Steam Baksa course presentation" class="photo-crop-img cursor-zoom">
-            <span class="stage-badge">Stage 04</span>
-          </div>
-          <div class="stage-text">
-            <span class="stage-category">Steamed Delicacies</span>
-            <h3 class="stage-name">4. Steam Baksa</h3>
-            <p class="stage-desc">
-              A traditional heavy brass canister opened tableside to reveal steaming soft dhokla, rolled khandvi with mustard tempering, and fresh green chili accents.
-            </p>
-          </div>
-        </div>
-
-        <!-- Stage 5: Frozen Entremets -->
-        <div class="journey-stage-row">
-          <div class="stage-media photo-crop-wrapper" data-lightbox="assets/images/Screenshot_20260925_062947_Maps.jpg" data-caption="Stage 5: Frozen Entremets - Palate cleansing kulfi popsicle dipped in rabdi.">
-            <img src="assets/images/Screenshot_20260925_062947_Maps.jpg" alt="Frozen Entremets Course" class="photo-crop-img cursor-zoom">
-            <span class="stage-badge">Stage 05</span>
-          </div>
-          <div class="stage-text">
-            <span class="stage-category">Palate Cleanser</span>
-            <h3 class="stage-name">5. Frozen Entremets</h3>
-            <p class="stage-desc">
-              A refreshing frozen treat—artisanal kulfi popsicle dipped in sweet rabdi syrup—designed to refresh the palate between savoury courses and the main feast.
-            </p>
-          </div>
-        </div>
-
-        <!-- Stage 6: Roti Thaal / Rice Thaal -->
-        <div class="journey-stage-row reverse-row">
-          <div class="stage-media photo-crop-wrapper" data-lightbox="assets/images/Screenshot_20260925_063020_Maps.jpg" data-caption="Stage 6: Roti Thaal and Rice Thaal - Handcrafted breads and turmeric grains.">
-            <img src="assets/images/Screenshot_20260925_063020_Maps.jpg" alt="Roti Thaal and Rice Thaal Course" class="photo-crop-img cursor-zoom">
-            <span class="stage-badge">Stage 06</span>
-          </div>
-          <div class="stage-text">
-            <span class="stage-category">Regional Grains &amp; Breads</span>
-            <h3 class="stage-name">6. Roti Thaal / Rice Thaal</h3>
-            <p class="stage-desc">
-              Freshly turned millet rotla with white butter, puran poli, hot puffed puris, and khoba roti served alongside spiced turmeric rice pyramids, kadhi, and kathol.
-            </p>
-          </div>
-        </div>
-
-        <!-- Stage 7: Khichdi & Kadhi -->
-        <div class="journey-stage-row">
-          <div class="stage-media photo-crop-wrapper" data-lightbox="assets/images/Screenshot_20260925_063103_Maps.jpg" data-caption="Stage 7: Vaghareli Khichdi and Kadhi drizzled with pure golden cow ghee.">
-            <img src="assets/images/Screenshot_20260925_063103_Maps.jpg" alt="Khichdi and Kadhi course" class="photo-crop-img cursor-zoom">
-            <span class="stage-badge">Stage 07</span>
-          </div>
-          <div class="stage-text">
-            <span class="stage-category">Heart of Gujarat</span>
-            <h3 class="stage-name">7. Khichdi &amp; Kadhi</h3>
-            <p class="stage-desc">
-              Comforting Vaghareli Khichdi crowned with crispy papad shards, served with spiced sweet-and-sour Gujarati kadhi and a generous tableside pour of warm golden cow ghee.
-            </p>
-          </div>
-        </div>
-
-        <!-- Stage 8: Mishthaan Platter -->
-        <div class="journey-stage-row reverse-row">
-          <div class="stage-media photo-crop-wrapper" data-lightbox="assets/images/Screenshot_20260925_062947_Maps.jpg" data-caption="Stage 8: Mishthaan Platter - Royal dessert course with miniature brass balance scale and gold leaf.">
-            <img src="assets/images/Screenshot_20260925_062947_Maps.jpg" alt="Mishthaan Platter royal dessert course" class="photo-crop-img cursor-zoom">
-            <span class="stage-badge">Stage 08</span>
-          </div>
-          <div class="stage-text">
-            <span class="stage-category">Sweet Symphony</span>
-            <h3 class="stage-name">8. Mishthaan Platter</h3>
-            <p class="stage-desc">
-              A grand dessert finale in a fluted silver tray with swirling dry-ice aromatics, featuring a functioning miniature brass Tarazu (balance scale) with regional confections, shrikhand tartlets, and 24K gold vark halwa.
-            </p>
-          </div>
-        </div>
-
-        <!-- Stage 9: Mukhwas -->
-        <div class="journey-stage-row">
-          <div class="stage-media photo-crop-wrapper" data-lightbox="assets/images/Screenshot_20260925_063720_Gallery.jpg" data-caption="Stage 9: Mukhwas and chilled paan shots on ice.">
-            <img src="assets/images/Screenshot_20260925_063720_Gallery.jpg" alt="Mukhwas digestive finish" class="photo-crop-img cursor-zoom">
-            <span class="stage-badge">Stage 09</span>
-          </div>
-          <div class="stage-text">
-            <span class="stage-category">Digestive Finale</span>
-            <h3 class="stage-name">9. Mukhwas</h3>
-            <p class="stage-desc">
-              The traditional digestif closure: artisanal botanical seeds, roasted fennel, dried dates, and signature chilled paan elixir shots served over shaved ice.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 3. PHOTO / GALLERY SECTION -->
-  <section class="section gallery-section" id="gallery">
-    <div class="container">
-      <div class="section-header text-center">
-        <span class="section-tagline">Visual Gastronomy</span>
-        <h2 class="section-title">The Sārvatt Gallery</h2>
-        <div class="section-rule"><span>✦</span></div>
-        <p class="section-subtitle">
-          An authentic glimpse into our restaurant dining sanctum, master tableside service, and regal western Indian course presentations.
-        </p>
-      </div>
-
-      <div class="gallery-grid-masonry">
-        <!-- Feature 1: Dining Sanctum (Span 8) -->
-        <div class="gallery-card span-8" data-lightbox="assets/images/Screenshot_20260925_063020_Maps.jpg" data-caption="The Dining Sanctum - Amber pendant lighting canopy, dressed white damask linens, and master chef tableside service at Hyatt Regency Ahmedabad.">
-          <img 
-            src="assets/images/Screenshot_20260925_063020_Maps.jpg" 
-            alt="Sārvatt Dining Sanctum and Master Chef Tableside" 
-            class="gallery-card-img"
-            loading="lazy"
-          >
-          <span class="gallery-top-badge">🔍 Click to Expand</span>
-          <div class="gallery-card-overlay">
-            <span class="gallery-card-tag">Interior &amp; Service</span>
-            <h3 class="gallery-card-title">The Dining Sanctum &amp; Tableside Craft</h3>
-            <p class="gallery-card-sub">
-              Warm amber pendant glass lanterns, velvet upholstery, fluted columns, and personal narration by master chefs.
-            </p>
-          </div>
-        </div>
-
-        <!-- Feature 2: Visual Identity & Ambiance (Span 4) -->
-        <div class="gallery-card span-4" data-lightbox="assets/images/Screenshot_20260925_063720_Gallery.jpg" data-caption="The Sārvatt Journey - Official visual identity, gilded botanical emblem, and timeless Sanskrit ethos at Hyatt Regency Ahmedabad.">
-          <img 
-            src="assets/images/Screenshot_20260925_063720_Gallery.jpg" 
-            alt="The Sārvatt Journey Botanical Emblem" 
-            class="gallery-card-img"
-            loading="lazy"
-          >
-          <span class="gallery-top-badge">🔍 Click to Expand</span>
-          <div class="gallery-card-overlay">
-            <span class="gallery-card-tag">Brand Ethos</span>
-            <h3 class="gallery-card-title">The Sārvatt Journey</h3>
-            <p class="gallery-card-sub">
-              Named from the Sanskrit word for &ldquo;precious&rdquo;, celebrating royal regional heritage.
-            </p>
-          </div>
-        </div>
-
-        <!-- Feature 3: Naashta Pitara Heirloom Chest (Span 4) -->
-        <div class="gallery-card span-4" data-lightbox="assets/images/Screenshot_20260925_063103_Maps.jpg" data-caption="Naashta Pitara - Handcrafted wooden heirloom chest with standing fafda, spiral chakri, and traditional ceramic pickle barnis.">
-          <img 
-            src="assets/images/Screenshot_20260925_063103_Maps.jpg" 
-            alt="Naashta Pitara Wooden Chest with Gujarati Dry Snacks" 
-            class="gallery-card-img"
-            loading="lazy"
-          >
-          <span class="gallery-top-badge">🔍 Click to Expand</span>
-          <div class="gallery-card-overlay">
-            <span class="gallery-card-tag">Stage 01 Course</span>
-            <h3 class="gallery-card-title">Naashta Pitara Snack Chest</h3>
-            <p class="gallery-card-sub">
-              Traditional wooden chest presenting fafda, chakri, gathiya, and fresh sambharo barnis.
-            </p>
-          </div>
-        </div>
-
-        <!-- Feature 4: Artisanal Chaat on Dried Chilies (Span 4) -->
-        <div class="gallery-card span-4" data-lightbox="assets/images/Screenshot_20260925_063115_Maps.jpg" data-caption="Artisanal Chaat - Deconstructed dahi papdi and crisp katori chaat presented over an aromatic bed of whole sun-dried red chilies.">
-          <img 
-            src="assets/images/Screenshot_20260925_063115_Maps.jpg" 
-            alt="Artisanal Chaat Course on whole red chilies" 
-            class="gallery-card-img"
-            loading="lazy"
-          >
-          <span class="gallery-top-badge">🔍 Click to Expand</span>
-          <div class="gallery-card-overlay">
-            <span class="gallery-card-tag">Stage 03 Course</span>
-            <h3 class="gallery-card-title">Chaat on Sun-Dried Chilies</h3>
-            <p class="gallery-card-sub">
-              Whisked cool yoghurt, ruby pomegranate arils, and crisp nylon sev in ceramic serving boat dishes.
-            </p>
-          </div>
-        </div>
-
-        <!-- Feature 5: Royal Mishtaan Thaal & Tarazu (Span 4) -->
-        <div class="gallery-card span-4" data-lightbox="assets/images/Screenshot_20260925_062947_Maps.jpg" data-caption="Royal Mishtaan Thaal - Grand dessert symphony on a fluted silver tray with swirling aromatic vapor, pure 24K gold vark halwa, and miniature brass balance scale (Tarazu).">
-          <img 
-            src="assets/images/Screenshot_20260925_062947_Maps.jpg" 
-            alt="Royal Mishtaan Thaal with miniature brass balance scale" 
-            class="gallery-card-img"
-            loading="lazy"
-          >
-          <span class="gallery-top-badge">🔍 Click to Expand</span>
-          <div class="gallery-card-overlay">
-            <span class="gallery-card-tag">Stage 08 Finale</span>
-            <h3 class="gallery-card-title">Mishtaan Thaal &amp; Tarazu</h3>
-            <p class="gallery-card-sub">
-              Fluted silver tray, swirling vapor mist, shrikhand tartlets, and sweet balance scale.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5. VIDEO SECTION -->
-  <section class="section video-section" id="video">
-    <div class="container">
-      <div class="section-header text-center">
-        <span class="section-tagline">Cinematic Perspective</span>
-        <h2 class="section-title">Experience Sārvatt in Motion</h2>
-        <div class="section-rule"><span>🎬</span></div>
-        <p class="section-subtitle">
-          Experience the sensory harmony of our tableside journey—from heirloom dry-snack chests to royal dessert presentations.
-        </p>
-      </div>
-
-      <div class="video-player-card">
-        <div class="video-screen-wrapper">
-          <video 
-            id="sarvatt-video-player" 
-            class="sarvatt-video-player" 
-            controls 
-            preload="metadata" 
-            poster="assets/images/Screenshot_20260925_063020_Maps.jpg"
-            playsinline
-          >
-            <source src="assets/videos/sarvatt-journey.mp4" type="video/mp4">
-            Your browser does not support high-definition HTML5 video playback.
-          </video>
-        </div>
-
-        <div class="video-info-bar">
-          <div class="video-info-text">
-            <strong>The Sārvatt Gastronomic Reel</strong>
-            <span>Recorded at Hyatt Regency Ahmedabad · High Definition 1080p</span>
-          </div>
-          <div class="video-actions">
-            <a href="https://maps.app.goo.gl/8dhq83QAuUNSXTdN8" target="_blank" rel="noopener noreferrer" class="btn btn-maps-sm">
-              <svg class="maps-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
-                <path fill="#EA4335" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-                <path fill="#4285F4" d="M12 2C10.5 2 9 2.5 8 3.5l4 9.5 4-9.5c-1-1-2.5-1.5-4-1.5z"/>
-                <path fill="#FBBC05" d="M8 3.5C6.2 5 5 7 5 9c0 2.5 1.5 5.5 3 8l4-8-4-9z"/>
-                <circle fill="#FFFFFF" cx="12" cy="9" r="2.8"/>
-                <circle fill="#B31412" cx="12" cy="9" r="1.5"/>
-              </svg>
-              <span>View in Google Maps</span>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Video Feature Highlights -->
-      <div class="video-pillars-grid">
-        <div class="video-pillar-item">
-          <div class="video-pillar-icon">🏺</div>
-          <h4>Tableside Storytelling</h4>
-          <p>Every course is presented and explained by our culinary team, sharing the regional origin and ancestral techniques of western India.</p>
-        </div>
-        <div class="video-pillar-item">
-          <div class="video-pillar-icon">✨</div>
-          <h4>Heirloom Service Ware</h4>
-          <p>Traditional brass canisters, fluted silver trays, copper platters, and custom wooden chests crafted specifically for Sārvatt.</p>
-        </div>
-        <div class="video-pillar-item">
-          <div class="video-pillar-icon">🌿</div>
-          <h4>Sattvik &amp; Jain Purity</h4>
-          <p>Strict observance of vegetarian and Jain culinary practices verified by the Sattvik Council of India for four consecutive audits.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 7. DRINKS -->
-  <section class="section drinks-section" id="drinks">
-    <div class="container">
-      <div class="section-header text-center">
-        <span class="section-tagline">Indigenous Botanical &amp; Modern Beverages</span>
-        <h2 class="section-title">Drinks Menu</h2>
-        <div class="section-rule"><span>🍹</span></div>
-        <p class="section-subtitle">
-          Traditional coolers and artisanal botanical infusions curated to accompany the meal.
-        </p>
-      </div>
-
-      <div class="drinks-cards-grid">
-        <!-- Column 1: Traditional & Beverages -->
-        <div class="drinks-card">
-          <h3 class="drinks-group-title">Regional Classics &amp; Beverages</h3>
-          <ul class="drinks-item-list">
-            <li>
-              <div class="drink-item-header">
-                <span class="drink-name">Kokum Sharbat</span>
-                <span class="drink-price">₹550</span>
-              </div>
-              <p class="drink-desc">Tangy indigenous wild mangosteen cooler with cumin and rock salt.</p>
-            </li>
-            <li>
-              <div class="drink-item-header">
-                <span class="drink-name">Aam Panna</span>
-                <span class="drink-price">₹550</span>
-              </div>
-              <p class="drink-desc">Spiced green mango cooler with roasted cumin and fresh mint.</p>
-            </li>
-            <li>
-              <div class="drink-item-header">
-                <span class="drink-name">Coffee</span>
-                <span class="drink-price">₹375</span>
-              </div>
-              <p class="drink-desc">Freshly brewed artisanal roast.</p>
-            </li>
-            <li>
-              <div class="drink-item-header">
-                <span class="drink-name">Tea</span>
-                <span class="drink-price">₹345</span>
-              </div>
-              <p class="drink-desc">Select estate teas and traditional masala chai.</p>
-            </li>
-            <li>
-              <div class="drink-item-header">
-                <span class="drink-name">Iced Tea</span>
-                <span class="drink-price">₹300</span>
-              </div>
-              <p class="drink-desc">Chilled infused tea with lemon and herbs.</p>
-            </li>
-            <li>
-              <div class="drink-item-header">
-                <span class="drink-name">Aerated Beverages</span>
-                <span class="drink-price">₹300</span>
-              </div>
-              <p class="drink-desc">Selection of carbonated soft drinks.</p>
-            </li>
-            <li>
-              <div class="drink-item-header">
-                <span class="drink-name">Bottled Water</span>
-                <span class="drink-price">₹250</span>
-              </div>
-              <p class="drink-desc">Packaged natural drinking water.</p>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Column 2: Signature Crafted Elixirs -->
-        <div class="drinks-card highlight-drinks">
-          <h3 class="drinks-group-title">Signature Botanical Elixirs</h3>
-          <ul class="drinks-item-list">
-            <li>
-              <div class="drink-item-header">
-                <span class="drink-name">Akik</span>
-                <span class="drink-price">₹550</span>
-              </div>
-              <p class="drink-desc">Agate-stone inspired botanical blend with floral notes.</p>
-            </li>
-            <li>
-              <div class="drink-item-header">
-                <span class="drink-name">Batik</span>
-                <span class="drink-price">₹550</span>
-              </div>
-              <p class="drink-desc">Artisanal citrus infusion named after traditional craft dyeing.</p>
-            </li>
-            <li>
-              <div class="drink-item-header">
-                <span class="drink-name">Thewa</span>
-                <span class="drink-price">₹550</span>
-              </div>
-              <p class="drink-desc">Gilded Rajasthani heritage cooler with saffron essence.</p>
-            </li>
-            <li>
-              <div class="drink-item-header">
-                <span class="drink-name">Lazuli</span>
-                <span class="drink-price">₹550</span>
-              </div>
-              <p class="drink-desc">Cooling lapis-inspired herbal and berry nectar.</p>
-            </li>
-            <li>
-              <div class="drink-item-header">
-                <span class="drink-name">Khejri</span>
-                <span class="drink-price">₹550</span>
-              </div>
-              <p class="drink-desc">Inspired by the sacred desert tree, featuring earthy spiced undertones.</p>
-            </li>
-            <li>
-              <div class="drink-item-header">
-                <span class="drink-name">Opal</span>
-                <span class="drink-price">₹550</span>
-              </div>
-              <p class="drink-desc">Shimmering tender coconut and crushed cardamom cooler.</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="drinks-notice-box">
-        <p><em>Menu prices may change seasonally. Please verify current pricing before ordering. All prices subject to applicable government taxes and a 5% discretionary service charge.</em></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 8. MENU SECTION ("EXPLORE THE MENU") -->
-  <section class="section menu-cta-section" id="menu-pdf">
-    <div class="container">
-      <div class="menu-cta-card">
-        <div class="menu-cta-content">
-          <span class="menu-cta-tagline">Official Restaurant Documentation</span>
-          <h2 class="menu-cta-title">Explore the Menu</h2>
-          <p class="menu-cta-text">
-            While our dining experience is structured around the multi-stage culinary sequences of Aboli, Kaner, and Aakdo, you can view the complete official Hyatt menu documentation:
-          </p>
-          <div class="menu-cta-btn-wrap">
-            <a href="https://www.hyatt.com/content/dam/hotel/propertysites/assets/regency/amdhr/documents/en_US/dining/sarvatt/Sarvatt-Restaurant-Menu.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-gold-large">
-              <span>View Full Menu (PDF) →</span>
-            </a>
-          </div>
-          <span class="menu-cta-subtext">Opens the official Hyatt Regency Ahmedabad Sārvatt PDF menu document in a new tab.</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 9. PRICE GUIDE -->
-  <section class="section price-guide-section" id="price-guide">
-    <div class="container">
-      <div class="section-header text-center">
-        <span class="section-tagline">Independent Third-Party Estimates</span>
-        <h2 class="section-title">Price Guide</h2>
-        <div class="section-rule"><span>⚖️</span></div>
-        <p class="section-subtitle">
-          Dining cost indications reported by major restaurant listing platforms:
-        </p>
-      </div>
-
-      <div class="price-cards-grid">
-        <div class="price-platform-card">
-          <div class="platform-logo">Swiggy Dineout</div>
-          <div class="platform-estimate">Approx. ₹2,200</div>
-          <span class="platform-basis">for two guests</span>
-          <p class="platform-notes">Swiggy Dineout listing indication</p>
-        </div>
-
-        <div class="price-platform-card highlight-price">
-          <div class="platform-logo">Zomato / District</div>
-          <div class="platform-estimate">Approx. ₹2,500</div>
-          <span class="platform-basis">for two guests</span>
-          <p class="platform-notes">Zomato / District listing indication</p>
-        </div>
-
-        <div class="price-platform-card">
-          <div class="platform-logo">Restaurant Guru</div>
-          <div class="platform-estimate">Approx. ₹2,000</div>
-          <span class="platform-basis">per person</span>
-          <p class="platform-notes">Restaurant Guru platform indication</p>
-        </div>
-      </div>
-
-      <div class="price-guide-disclaimer">
-        <p><strong>Note on Third-Party Price Estimates:</strong> These figures are from different platforms and are not directly comparable. The structured seven- and nine-course dining experiences (such as Kaner at ₹1,800/person and Aakdo at ₹2,400/person before taxes) can have a different cost from casual ordering. These estimates are provided for general guidance and do not represent guaranteed bills.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 10. OPENING HOURS -->
-  <section class="section hours-section" id="hours">
-    <div class="container">
-      <div class="section-header text-center">
-        <span class="section-tagline">Operating Schedule</span>
-        <h2 class="section-title">Opening Hours</h2>
-        <div class="section-rule"><span>🕒</span></div>
-      </div>
-
-      <div class="hours-table-card">
-        <div class="table-responsive">
-          <table class="hours-table">
-            <thead>
-              <tr>
-                <th>Day</th>
-                <th>Lunch Session</th>
-                <th>Dinner Session</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Monday</strong></td>
-                <td>12:30 PM – 2:30 PM*</td>
-                <td>7:00 PM – 10:30 PM</td>
-              </tr>
-              <tr>
-                <td><strong>Tuesday</strong></td>
-                <td>12:30 PM – 2:30 PM*</td>
-                <td>7:00 PM – 10:30 PM</td>
-              </tr>
-              <tr>
-                <td><strong>Wednesday</strong></td>
-                <td>12:30 PM – 2:30 PM*</td>
-                <td>7:00 PM – 10:30 PM</td>
-              </tr>
-              <tr>
-                <td><strong>Thursday</strong></td>
-                <td>12:30 PM – 2:30 PM*</td>
-                <td>7:00 PM – 10:30 PM</td>
-              </tr>
-              <tr>
-                <td><strong>Friday</strong></td>
-                <td>12:30 PM – 2:30 PM*</td>
-                <td>7:00 PM – 10:30 PM</td>
-              </tr>
-              <tr>
-                <td><strong>Saturday</strong></td>
-                <td>12:30 PM – 2:30 PM</td>
-                <td>7:00 PM – 10:30 PM</td>
-              </tr>
-              <tr>
-                <td><strong>Sunday</strong></td>
-                <td>12:30 PM – 2:30 PM</td>
-                <td>7:00 PM – 10:30 PM</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="hours-notice-callout">
-          <span class="notice-icon">⚠️</span>
-          <p>
-            <strong>*Weekday Lunch Service Note:</strong> Lunch availability may vary. Current third-party listings disagree about weekday lunch service, so please verify directly with the restaurant before visiting on weekdays.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 14. AMBIENCE -->
-  <section class="section ambience-section" id="ambience">
-    <div class="container">
-      <div class="section-header text-center">
-        <span class="section-tagline">Interior &amp; Architecture</span>
-        <h2 class="section-title">A Timeless Western Indian Setting</h2>
-        <div class="section-rule"><span>🕯️</span></div>
-        <p class="section-subtitle">
-          The restaurant setting is inspired by a timeless era of western India, harmoniously marrying heritage warmth with contemporary five-star hotel styling.
-        </p>
-      </div>
-
-      <div class="ambience-grid">
-        <div class="ambience-visual-col photo-crop-wrapper" data-lightbox="assets/images/Screenshot_20260925_063020_Maps.jpg" data-caption="Sārvatt Ambience: Warm gold lighting, hanging pendant glass lamps, and fine wooden furniture.">
-          <img src="assets/images/Screenshot_20260925_063020_Maps.jpg" alt="Sārvatt Interior Ambience" class="photo-crop-img cursor-zoom">
-        </div>
-        <div class="ambience-features-col">
-          <h3 class="ambience-heading">Documented Design Elements</h3>
-          <ul class="ambience-list">
-            <li>
-              <strong>Warm Gold Lighting &amp; Pendant Lamps:</strong> Clusters of suspended amber glass globes casting a serene golden radiance across tables.
-            </li>
-            <li>
-              <strong>Rich Wooden Furniture:</strong> Warm parquet flooring and bespoke dark wood seating with red and brown upholstered cushioning.
-            </li>
-            <li>
-              <strong>Dressed Table Linens:</strong> Elegant white damask tablecloths providing a pristine canvas for every course.
-            </li>
-            <li>
-              <strong>Decorative Shelving &amp; Fluted Cylinders:</strong> Multicoloured architectural fluted columns and textured display niches.
-            </li>
-            <li>
-              <strong>Traditional Metal Vessels:</strong> Handcrafted brass, copper, and silver-plated service ware referencing Gujarati households.
-            </li>
-            <li>
-              <strong>Traditional Cultural Accents:</strong> Brass wall sculptures depicting ancient Gujarati script motifs alongside refined contemporary hotel finishes.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 15. REVIEWS & RATINGS -->
-  <section class="section reviews-section" id="reviews">
-    <div class="container">
-      <div class="section-header text-center">
-        <span class="section-tagline">Verified Platform Scores</span>
-        <h2 class="section-title">What Diners Are Saying</h2>
-        <div class="section-rule"><span>⭐</span></div>
-        <p class="section-subtitle">
-          Ratings compiled from recognized independent dining and review directories:
-        </p>
-      </div>
-
-      <div class="ratings-cards-grid">
-        <div class="rating-card">
-          <span class="rating-source">Google-linked listing</span>
-          <div class="rating-number">4.5 <span class="max-rating">/ 5</span></div>
-          <div class="rating-stars">★★★★½</div>
-          <span class="rating-count">from 135 reviews</span>
-        </div>
-
-        <div class="rating-card">
-          <span class="rating-source">Restaurant Guru Google Aggregation</span>
-          <div class="rating-number">4.6 <span class="max-rating">/ 5</span></div>
-          <div class="rating-stars">★★★★★</div>
-          <span class="rating-count">from 129 reviews</span>
-        </div>
-
-        <div class="rating-card">
-          <span class="rating-source">Zomato Dining</span>
-          <div class="rating-number">4.6 <span class="max-rating">/ 5</span></div>
-          <div class="rating-stars">★★★★★</div>
-          <span class="rating-count">from 107 dining ratings</span>
-        </div>
-
-        <div class="rating-card highlight-rating">
-          <span class="rating-source">Tripadvisor</span>
-          <div class="rating-number">4.9 <span class="max-rating">/ 5</span></div>
-          <div class="rating-stars">★★★★★</div>
-          <span class="rating-count">from 107 reviews</span>
-        </div>
-
-        <div class="rating-card">
-          <span class="rating-source">Hyatt Restaurant Page</span>
-          <div class="rating-number">4.7 <span class="max-rating">/ 5</span></div>
-          <div class="rating-stars">★★★★★</div>
-          <span class="rating-count">shown in review section</span>
-        </div>
-      </div>
-
-      <div class="ratings-disclaimer">
-        <p><em>Review counts and ratings change over time and differ between platforms, so these figures should not be treated as directly comparable.</em></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 16. RECENT DINER EXPERIENCE (TRIPADVISOR 2026 THEMES) -->
-  <section class="section diner-experience-section" id="diner-themes">
-    <div class="container">
-      <div class="experience-summary-card">
-        <span class="summary-tagline">Diner Feedback Themes</span>
-        <h3 class="summary-title">Recent Diner Experiences (2026 Feedback)</h3>
-        <p class="summary-text">
-          Reviews from diners on Tripadvisor in 2026 frequently highlight consistent themes:
-        </p>
-        <div class="themes-pill-list">
-          <span class="theme-tag">High Food Quality</span>
-          <span class="theme-tag">Attentive Service</span>
-          <span class="theme-tag">Staff Explaining Each Course</span>
-          <span class="theme-tag">Authentic Gujarati Cuisine</span>
-          <span class="theme-tag">Nine-Course Aakdo Experience</span>
-          <span class="theme-tag">Warm Ambience</span>
-          <span class="theme-tag">Khichdi and Kadhi Balance</span>
-          <span class="theme-tag">Artful Presentation</span>
-        </div>
-        <p class="summary-body mt-3">
-          Diners frequently describe Sārvatt as distinctly more than a normal meal because service staff narrate the regional heritage of each dish and the dining sequence is purposefully designed as an engaging culinary journey.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 17. AWARDS & RECOGNITION -->
-  <section class="section awards-section" id="awards">
-    <div class="container">
-      <div class="section-header text-center">
-        <span class="section-tagline">Verified Distinctions</span>
-        <h2 class="section-title">Awards &amp; Recognition</h2>
-        <div class="section-rule"><span>🏆</span></div>
-      </div>
-
-      <div class="awards-grid">
-        <!-- Award 1: Tripadvisor -->
-        <div class="award-card">
-          <div class="award-badge-icon">🎖️</div>
-          <h3 class="award-title">Tripadvisor Travellers' Choice 2026</h3>
-          <p class="award-desc">
-            An established Tripadvisor distinction awarded on the basis of consistently high traveler feedback, ratings, and Tripadvisor's recognition criteria.
-          </p>
-          <span class="award-source">Tripadvisor Recognized Listing</span>
-        </div>
-
-        <!-- Award 2: Sattvik Certification -->
-        <div class="award-card">
-          <div class="award-badge-icon">🌿</div>
-          <h3 class="award-title">Sattvik Certification</h3>
-          <p class="award-desc">
-            Evaluated by the Sattvik Council of India for conformity with traditional vegetarian and Jain dietary practices, with a reported fourth consecutive annual audit completed.
-          </p>
-          <span class="award-source">Sattvik Council of India Evaluation</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 18. CHEF & CULINARY TEAM -->
-  <section class="section team-section" id="culinary-team">
-    <div class="container">
-      <div class="team-card-box">
-        <span class="team-tagline">Kitchen &amp; Hospitality Roster</span>
-        <h3 class="team-title">Chef &amp; Culinary Team</h3>
-        <div class="team-rule"></div>
-        <p class="team-paragraph">
-          Public listings have historically associated Sārvatt with <strong>Chef Surya Narayana</strong>. 
-        </p>
-        <p class="team-paragraph">
-          Meanwhile, recent 2026 diner feedback on Tripadvisor frequently mentions several current culinary and service team members who guide the tableside journey, including <strong>Chef Chandan</strong>, <strong>Dhruvil</strong>, <strong>Manisha</strong>, <strong>Mayna</strong>, and other attentive staff.
-        </p>
-        <span class="team-disclaimer">
-          <em>Note: Distinguishing established public associations from current review mentions; specific culinary leadership roles may evolve over time.</em>
+  <!-- ==========================================================================
+       1. HERO SECTION
+       ========================================================================== -->
+  <section class="section hero-section" id="hero">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <span class="hero-tagline">
+          <span class="tag-indicator"></span> Next-Generation Web Architecture
         </span>
+        <h1 class="hero-title">
+          Build remarkable web experiences with speed &amp; precision.
+        </h1>
+        <p class="hero-lead">
+          A production-grade, highly responsive framework engineered for modern digital products, landing pages, and web applications.
+        </p>
+        <div class="hero-buttons">
+          <a href="#features" class="btn btn-primary btn-lg">Explore Features</a>
+          <a href="#contact" class="btn btn-secondary btn-lg">Contact Us</a>
+        </div>
+
+        <div class="hero-metrics">
+          <div class="metric-item">
+            <span class="metric-value">99.9%</span>
+            <span class="metric-label">Uptime Reliability</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-value">100+</span>
+            <span class="metric-label">Pre-built Elements</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-value">&lt; 50ms</span>
+            <span class="metric-label">Interaction Latency</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-media-wrapper">
+        <div class="hero-card-preview">
+          <div class="preview-header">
+            <div class="preview-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <span class="preview-url">app.example.com</span>
+          </div>
+          <div class="preview-content">
+            <div class="preview-hero-mock">
+              <div class="mock-badge">Active Deployment</div>
+              <div class="mock-title">Dashboard Overview</div>
+              <div class="mock-graph">
+                <div class="mock-bar" style="height: 45%;"></div>
+                <div class="mock-bar" style="height: 70%;"></div>
+                <div class="mock-bar" style="height: 55%;"></div>
+                <div class="mock-bar" style="height: 90%;"></div>
+                <div class="mock-bar" style="height: 65%;"></div>
+                <div class="mock-bar" style="height: 100%;"></div>
+              </div>
+            </div>
+            <div class="mock-row">
+              <div class="mock-tile"></div>
+              <div class="mock-tile"></div>
+              <div class="mock-tile"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 13. FACILITIES -->
-  <section class="section facilities-section" id="facilities">
+  <!-- ==========================================================================
+       2. FEATURES SECTION
+       ========================================================================== -->
+  <section class="section features-section" id="features">
     <div class="container">
       <div class="section-header text-center">
-        <span class="section-tagline">Guest Amenities</span>
-        <h2 class="section-title">Dining Facilities</h2>
-        <div class="section-rule"><span>✦</span></div>
+        <span class="section-tagline">Core Capabilities</span>
+        <h2 class="section-title">Designed for modern performance</h2>
+        <p class="section-subtitle">
+          Everything required to deliver accessible, fast, and scalable digital experiences out of the box.
+        </p>
       </div>
 
-      <div class="facilities-grid">
-        <div class="facility-item">
-          <span class="fac-icon">📅</span>
-          <h4>Reservations</h4>
-          <p>Table bookings available online and via concierge.</p>
+      <div class="grid grid-3">
+        <!-- Feature Card 1 -->
+        <div class="card feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3 class="feature-title">Ultra-Fast Performance</h3>
+          <p class="feature-desc">
+            Optimized assets and minimal render overhead provide swift loading speeds across desktop and mobile devices.
+          </p>
+          <a href="#about" class="feature-link">Learn more &rarr;</a>
         </div>
-        <div class="facility-item">
-          <span class="fac-icon">🪑</span>
-          <h4>Indoor Seating</h4>
-          <p>Full indoor air-conditioned dining room.</p>
-        </div>
-        <div class="facility-item">
-          <span class="fac-icon">👨‍👩‍👧‍👦</span>
-          <h4>Family-Friendly</h4>
-          <p>Comfortable group dining with spacious arrangements.</p>
-        </div>
-        <div class="facility-item">
-          <span class="fac-icon">📶</span>
-          <h4>Complimentary Wi-Fi</h4>
-          <p>High-speed hotel wireless access.</p>
-        </div>
-        <div class="facility-item">
-          <span class="fac-icon">♿</span>
-          <h4>Wheelchair Accessible</h4>
-          <p>Elevator and ramp access throughout the property.</p>
-        </div>
-        <div class="facility-item">
-          <span class="fac-icon">🚪</span>
-          <h4>Step-Free Access</h4>
-          <p>Seamless entrance and corridor transit.</p>
-        </div>
-        <div class="facility-item">
-          <span class="fac-icon">🚗</span>
-          <h4>Valet Parking</h4>
-          <p>Hotel entrance valet and secure on-site parking.</p>
-        </div>
-        <div class="facility-item">
-          <span class="fac-icon">👶</span>
-          <h4>Highchairs</h4>
-          <p>Available on request for infants and toddlers.</p>
-        </div>
-        <div class="facility-item">
-          <span class="fac-icon">💳</span>
-          <h4>Credit Cards Accepted</h4>
-          <p>Major domestic and international credit/debit cards.</p>
-        </div>
-      </div>
 
-      <div class="facility-zomato-note">
-        <p><strong>Environment Note:</strong> Zomato describes Sārvatt's environment as relatively quiet and family-oriented, with ample space for large-group celebrations.</p>
+        <!-- Feature Card 2 -->
+        <div class="card feature-card">
+          <div class="feature-icon">📱</div>
+          <h3 class="feature-title">Responsive By Design</h3>
+          <p class="feature-desc">
+            Fluid typography, adaptive grid layouts, and touch-first interactions ensure seamless rendering on any screen.
+          </p>
+          <a href="#about" class="feature-link">Learn more &rarr;</a>
+        </div>
+
+        <!-- Feature Card 3 -->
+        <div class="card feature-card">
+          <div class="feature-icon">🛡️</div>
+          <h3 class="feature-title">Secure &amp; Standards-Compliant</h3>
+          <p class="feature-desc">
+            Built following strict semantic standards, high contrast ratios, and modern browser security conventions.
+          </p>
+          <a href="#about" class="feature-link">Learn more &rarr;</a>
+        </div>
+
+        <!-- Feature Card 4 -->
+        <div class="card feature-card">
+          <div class="feature-icon">🎨</div>
+          <h3 class="feature-title">Modular Theming System</h3>
+          <p class="feature-desc">
+            Centralized CSS custom properties make customizing brand palettes, radii, and typography effortless.
+          </p>
+          <a href="#about" class="feature-link">Learn more &rarr;</a>
+        </div>
+
+        <!-- Feature Card 5 -->
+        <div class="card feature-card">
+          <div class="feature-icon">🔍</div>
+          <h3 class="feature-title">SEO &amp; OpenGraph Ready</h3>
+          <p class="feature-desc">
+            Configured with structured metadata, social preview tags, and search engine discoverability best practices.
+          </p>
+          <a href="#about" class="feature-link">Learn more &rarr;</a>
+        </div>
+
+        <!-- Feature Card 6 -->
+        <div class="card feature-card">
+          <div class="feature-icon">⚙️</div>
+          <h3 class="feature-title">Developer Friendly</h3>
+          <p class="feature-desc">
+            Zero bloat, clean codebase architecture, and comprehensive modular structure that is easy to extend.
+          </p>
+          <a href="#about" class="feature-link">Learn more &rarr;</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 19. HYATT REGENCY AHMEDABAD -->
-  <section class="section hotel-section" id="hyatt-hotel">
-    <div class="container">
-      <div class="hotel-overview-card">
-        <span class="hotel-tagline">Host Property</span>
-        <h3 class="hotel-title">Hyatt Regency Ahmedabad</h3>
-        <p class="hotel-desc">
-          Sārvatt is housed on the second floor of Hyatt Regency Ahmedabad—a premier five-star business hotel located along Ashram Road directly beside the Sabarmati Riverfront. Recent corporate reporting notes the hotel features <strong>270 rooms</strong> following a 59-room expansion.
+  <!-- ==========================================================================
+       3. ABOUT / SPLIT CONTENT SECTION
+       ========================================================================== -->
+  <section class="section about-section" id="about">
+    <div class="container split-container">
+      <div class="split-content">
+        <span class="section-tagline">Architectural Philosophy</span>
+        <h2 class="section-title">Built with modern web standards and clean code</h2>
+        <p class="split-lead">
+          We focus on building resilient foundations so creators, teams, and developers can deploy experiences without friction.
         </p>
 
-        <div class="hotel-amenities-group">
-          <h4>Hotel Dining &amp; Wellness Amenities:</h4>
-          <div class="amenities-tags">
-            <span class="amenity-pill"><strong>Sārvatt</strong> (Gujarati Dining)</span>
-            <span class="amenity-pill"><strong>China House</strong> (Sichuan &amp; Chinese)</span>
-            <span class="amenity-pill"><strong>Tinello</strong> (Italian All-Day)</span>
-            <span class="amenity-pill"><strong>Chai Shop</strong> (24-Hour Lounge)</span>
-            <span class="amenity-pill"><strong>Aadi Spa</strong></span>
-            <span class="amenity-pill"><strong>Fitness Centre</strong></span>
-            <span class="amenity-pill"><strong>Swimming Pool</strong></span>
-          </div>
-        </div>
+        <ul class="value-list">
+          <li class="value-item">
+            <span class="value-check">✓</span>
+            <div>
+              <strong>Pure Semantic Structure:</strong> High-grade HTML5 semantics providing accessibility and natural hierarchy.
+            </div>
+          </li>
+          <li class="value-item">
+            <span class="value-check">✓</span>
+            <div>
+              <strong>Lightweight Styling Engine:</strong> Zero dependencies required for rapid stylesheet maintenance and overrides.
+            </div>
+          </li>
+          <li class="value-item">
+            <span class="value-check">✓</span>
+            <div>
+              <strong>Native Interaction Hooks:</strong> Built-in keyboard navigation, scroll-spy, and lightbox controls without external heavy libraries.
+            </div>
+          </li>
+        </ul>
 
-        <div class="hotel-cta-row">
-          <a href="https://www.hyatt.com/hyatt-regency/en-US/amdhr-hyatt-regency-ahmedabad" target="_blank" rel="noopener noreferrer" class="btn btn-outline-hotel">
-            <span>Open Hyatt Regency Ahmedabad →</span>
-          </a>
+        <div class="split-actions">
+          <a href="#showcase" class="btn btn-primary">View Showcase</a>
+          <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+        </div>
+      </div>
+
+      <div class="split-visual">
+        <div class="visual-card">
+          <div class="visual-header">
+            <span class="visual-badge">Modular Components</span>
+            <span class="visual-meta">Production Ready</span>
+          </div>
+          <div class="visual-body">
+            <div class="code-preview-block">
+              <code>
+                <span class="code-comment">&lt;!-- Clean Component Architecture --&gt;</span><br>
+                &lt;<span class="code-tag">section</span> <span class="code-attr">class</span>=<span class="code-val">"section"</span>&gt;<br>
+                &nbsp;&nbsp;&lt;<span class="code-tag">div</span> <span class="code-attr">class</span>=<span class="code-val">"container"</span>&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="code-tag">h2</span>&gt;Your Product Title&lt;/<span class="code-tag">h2</span>&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="code-tag">p</span>&gt;Modular and scalable content.&lt;/<span class="code-tag">p</span>&gt;<br>
+                &nbsp;&nbsp;&lt;/<span class="code-tag">div</span>&gt;<br>
+                &lt;/<span class="code-tag">section</span>&gt;
+              </code>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 20. NEARBY ("AROUND SĀRVATT") -->
-  <section class="section nearby-section" id="nearby">
+  <!-- ==========================================================================
+       4. SHOWCASE / GALLERY SECTION
+       ========================================================================== -->
+  <section class="section showcase-section" id="showcase">
     <div class="container">
       <div class="section-header text-center">
-        <span class="section-tagline">Local Neighborhood &amp; Sights</span>
-        <h2 class="section-title">Around Sārvatt</h2>
-        <div class="section-rule"><span>📍</span></div>
-      </div>
-
-      <div class="nearby-grid">
-        <div class="nearby-card">
-          <h4>Riverfront Garden</h4>
-          <p>Approx. 5-minute walk from the hotel.</p>
-        </div>
-        <div class="nearby-card">
-          <h4>Sabarmati Riverfront Promenade</h4>
-          <p>Approx. 0.7 km away with walking and cycling tracks.</p>
-        </div>
-        <div class="nearby-card">
-          <h4>Gandhi Ashram / Sabarmati Ashram</h4>
-          <p>Historic national landmark along the riverfront.</p>
-        </div>
-        <div class="nearby-card">
-          <h4>Sardar Patel Stadium</h4>
-          <p>Prominent sports and event complex.</p>
-        </div>
-        <div class="nearby-card">
-          <h4>Gujarat Vidyapith</h4>
-          <p>Historical university founded by Mahatma Gandhi.</p>
-        </div>
-        <div class="nearby-card">
-          <h4>Gandhi Bridge Viewpoint</h4>
-          <p>Scenic elevated perspective overlooking Sabarmati River.</p>
-        </div>
-      </div>
-
-      <div class="airport-notice-card">
-        <span class="notice-icon">✈️</span>
-        <p>
-          <strong>Airport Proximity:</strong> Hyatt describes the hotel as less than 7 km from Sardar Vallabhbhai Patel International Airport (AMD), while third-party travel listings give figures around 9–11 km depending on the chosen traffic routing.
+        <span class="section-tagline">Portfolio &amp; Showcase</span>
+        <h2 class="section-title">Explore feature highlights</h2>
+        <p class="section-subtitle">
+          Interactive components and responsive containers ready to display projects, assets, or media.
         </p>
       </div>
-    </div>
-  </section>
 
-  <!-- 11. LOCATION SECTION ("FIND SĀRVATT") -->
-  <section class="section location-section" id="location">
-    <div class="container">
-      <div class="location-card-box">
-        <div class="location-content">
-          <span class="location-tagline">Exact Destination</span>
-          <h2 class="location-restaurant-title">Find Sārvatt</h2>
-          <p class="location-hotel-title">Hyatt Regency Ahmedabad · Second Floor</p>
-
-          <div class="location-divider"></div>
-
-          <div class="location-details-list">
-            <div class="loc-item">
-              <span class="loc-icon">📍</span>
-              <div class="loc-text">
-                <strong>Address:</strong>
-                <span>Second Floor, Hyatt Regency Ahmedabad, 17/A Ashram Road, Near Sabarmati Riverfront, Usmanpura, Ahmedabad, Gujarat 380014, India</span>
-              </div>
+      <div class="grid grid-3">
+        <!-- Showcase Item 1 -->
+        <div class="card showcase-card" data-lightbox data-title="Modern Dashboard UI" data-desc="Adaptive analytical interfaces with real-time feedback.">
+          <div class="showcase-thumbnail">
+            <div class="thumbnail-placeholder bg-gradient-1">
+              <span class="thumbnail-icon">📊</span>
             </div>
-
-            <div class="loc-item">
-              <span class="loc-icon">ℹ️</span>
-              <div class="loc-text">
-                <strong>Inside the Hotel:</strong>
-                <span>Sārvatt is located inside Hyatt Regency Ahmedabad on the 2nd Floor rather than being a standalone street-front restaurant. Access via the main hotel lobby elevator or grand staircase.</span>
-              </div>
-            </div>
-
-            <div class="loc-item">
-              <span class="loc-icon">🚗</span>
-              <div class="loc-text">
-                <strong>Valet &amp; Parking:</strong>
-                <span>Complimentary hotel valet parking is available at the Hyatt Regency grand driveway entrance on Ashram Road.</span>
-              </div>
-            </div>
+            <span class="zoom-badge">🔍 Expand</span>
           </div>
-
-          <!-- Buttons -->
-          <div class="location-buttons-wrap">
-            <a href="https://maps.app.goo.gl/8dhq83QAuUNSXTdN8" target="_blank" rel="noopener noreferrer" class="btn btn-maps-large" id="location-maps-btn">
-              <svg class="maps-icon-xl" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-                <path fill="#EA4335" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-                <path fill="#4285F4" d="M12 2C10.5 2 9 2.5 8 3.5l4 9.5 4-9.5c-1-1-2.5-1.5-4-1.5z"/>
-                <path fill="#FBBC05" d="M8 3.5C6.2 5 5 7 5 9c0 2.5 1.5 5.5 3 8l4-8-4-9z"/>
-                <circle fill="#FFFFFF" cx="12" cy="9" r="3"/>
-                <circle fill="#B31412" cx="12" cy="9" r="1.6"/>
-              </svg>
-              <span>View in Google Maps →</span>
-            </a>
-
-            <a href="https://www.hyatt.com/hyatt-regency/en-US/amdhr-hyatt-regency-ahmedabad" target="_blank" rel="noopener noreferrer" class="btn btn-hotel-link">
-              <span>Open Hyatt Regency Ahmedabad →</span>
-            </a>
+          <div class="showcase-info">
+            <span class="showcase-category">Interface Design</span>
+            <h4 class="showcase-title">Modern Dashboard UI</h4>
+            <p class="showcase-desc">Responsive metrics cards and interactive layout components.</p>
           </div>
         </div>
 
-        <div class="location-visual photo-crop-wrapper" data-lightbox="assets/images/Screenshot_20260925_063020_Maps.jpg" data-caption="Sārvatt - Second Floor, Hyatt Regency Ahmedabad, 17/A Ashram Road">
-          <img src="assets/images/Screenshot_20260925_063020_Maps.jpg" alt="Sārvatt Restaurant at Hyatt Regency Ahmedabad" class="photo-crop-img">
-          <div class="location-floating-badge">
-            <span class="badge-dot"></span>
-            <span>Hyatt Regency Ahmedabad · 2nd Floor</span>
+        <!-- Showcase Item 2 -->
+        <div class="card showcase-card" data-lightbox data-title="Mobile Application Flow" data-desc="Touch-friendly flows designed for mobile devices.">
+          <div class="showcase-thumbnail">
+            <div class="thumbnail-placeholder bg-gradient-2">
+              <span class="thumbnail-icon">📱</span>
+            </div>
+            <span class="zoom-badge">🔍 Expand</span>
+          </div>
+          <div class="showcase-info">
+            <span class="showcase-category">Mobile Engineering</span>
+            <h4 class="showcase-title">Mobile Application Flow</h4>
+            <p class="showcase-desc">Seamless touch interactions with responsive drawer navigation.</p>
+          </div>
+        </div>
+
+        <!-- Showcase Item 3 -->
+        <div class="card showcase-card" data-lightbox data-title="Cloud Infrastructure" data-desc="Robust deployment pipelines with continuous monitoring.">
+          <div class="showcase-thumbnail">
+            <div class="thumbnail-placeholder bg-gradient-3">
+              <span class="thumbnail-icon">☁️</span>
+            </div>
+            <span class="zoom-badge">🔍 Expand</span>
+          </div>
+          <div class="showcase-info">
+            <span class="showcase-category">Cloud Systems</span>
+            <h4 class="showcase-title">Cloud Infrastructure</h4>
+            <p class="showcase-desc">Distributed edge caching with automated continuous verification.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 12. CONTACT SECTION -->
+  <!-- ==========================================================================
+       5. TESTIMONIALS SECTION
+       ========================================================================== -->
+  <section class="section testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tagline">User Reviews</span>
+        <h2 class="section-title">What teams are saying</h2>
+        <p class="section-subtitle">
+          Feedback and reviews from developers and teams utilizing this foundation.
+        </p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card testimonial-card">
+          <div class="rating-stars">★★★★★</div>
+          <p class="testimonial-quote">
+            &ldquo;The structure is impeccably organized. We were able to plug in our content and launch in record time without wrestling with dependencies.&rdquo;
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">A</div>
+            <div class="author-info">
+              <strong>Alex Morgan</strong>
+              <span>Lead Product Designer</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card testimonial-card">
+          <div class="rating-stars">★★★★★</div>
+          <p class="testimonial-quote">
+            &ldquo;Clean CSS variables, responsive containers, and lightweight JS. Everything works reliably across devices right out of the box.&rdquo;
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">S</div>
+            <div class="author-info">
+              <strong>Sarah Chen</strong>
+              <span>Senior Frontend Engineer</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card testimonial-card">
+          <div class="rating-stars">★★★★★</div>
+          <p class="testimonial-quote">
+            &ldquo;Exceptional attention to semantic markup and accessibility. It provided the exact clean slate our creative team needed.&rdquo;
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">D</div>
+            <div class="author-info">
+              <strong>David Miller</strong>
+              <span>Technical Director</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       6. CONTACT SECTION
+       ========================================================================== -->
   <section class="section contact-section" id="contact">
     <div class="container">
       <div class="section-header text-center">
-        <span class="section-tagline">Direct Communications</span>
-        <h2 class="section-title">Contact Us</h2>
-        <div class="section-rule"><span>📞</span></div>
+        <span class="section-tagline">Communication</span>
+        <h2 class="section-title">Get in touch with our team</h2>
         <p class="section-subtitle">
-          Connect directly with the restaurant team or hotel front desk.
+          Have questions or want to collaborate? Send a message and we will respond promptly.
         </p>
       </div>
 
-      <div class="contact-grid">
-        <!-- Contact Directory Card -->
-        <div class="contact-info-card">
-          <h3 class="contact-card-title">Phone &amp; Email Directory</h3>
+      <div class="grid grid-2 contact-grid">
+        <!-- Direct Directory Card -->
+        <div class="card contact-info-card">
+          <h3 class="contact-card-title">Contact Directory</h3>
+          <p class="contact-card-sub">Reach our team directly through our communication channels.</p>
 
           <div class="contact-entries">
-            <!-- Official Hyatt Restaurant Contact -->
-            <div class="entry-row">
-              <div class="entry-icon">📞</div>
-              <div class="entry-data">
-                <span class="entry-label">Restaurant Contact (Official Hyatt Listing)</span>
-                <a href="tel:+917574826620" class="entry-value highlight-tel">+91 75748 26620</a>
-              </div>
-            </div>
-
-            <!-- Alternative Google/Waze Listing -->
-            <div class="entry-row">
-              <div class="entry-icon">📱</div>
-              <div class="entry-data">
-                <span class="entry-label">Restaurant Alternate (Google-linked / Waze listing)</span>
-                <a href="tel:+917574826670" class="entry-value">+91 75748 26670</a>
-              </div>
-            </div>
-
-            <!-- Hotel Front Desk -->
-            <div class="entry-row">
-              <div class="entry-icon">🏨</div>
-              <div class="entry-data">
-                <span class="entry-label">Hotel Switchboard (Hyatt Regency Ahmedabad)</span>
-                <a href="tel:+917961171234" class="entry-value">+91 79 6117 1234</a>
-              </div>
-            </div>
-
-            <!-- Dining Email -->
             <div class="entry-row">
               <div class="entry-icon">✉️</div>
               <div class="entry-data">
-                <span class="entry-label">Dining Reservations Email</span>
-                <a href="mailto:dining.ahmedabad@hyatt.com" class="entry-value">dining.ahmedabad@hyatt.com</a>
+                <span class="entry-label">General Email</span>
+                <a href="mailto:hello@example.com" class="entry-value">hello@example.com</a>
               </div>
             </div>
 
-            <!-- Hotel General Email -->
             <div class="entry-row">
-              <div class="entry-icon">🏢</div>
+              <div class="entry-icon">📞</div>
               <div class="entry-data">
-                <span class="entry-label">Hotel General Email</span>
-                <a href="mailto:ahmedabad.regency@hyatt.com" class="entry-value">ahmedabad.regency@hyatt.com</a>
+                <span class="entry-label">Telephone</span>
+                <a href="tel:+18005550199" class="entry-value">+1 (800) 555-0199</a>
               </div>
             </div>
 
-            <!-- Google Maps Link -->
             <div class="entry-row">
-              <div class="entry-icon">🗺️</div>
+              <div class="entry-icon">📍</div>
               <div class="entry-data">
-                <span class="entry-label">Google Maps Direct Navigation</span>
-                <a href="https://maps.app.goo.gl/8dhq83QAuUNSXTdN8" target="_blank" rel="noopener noreferrer" class="entry-link-maps">
-                  maps.app.goo.gl/8dhq83QAuUNSXTdN8 ↗
-                </a>
+                <span class="entry-label">Office Location</span>
+                <span class="entry-value">100 Innovation Way, Suite 400<br>San Francisco, CA 94107</span>
+              </div>
+            </div>
+
+            <div class="entry-row">
+              <div class="entry-icon">🕒</div>
+              <div class="entry-data">
+                <span class="entry-label">Support Hours</span>
+                <span class="entry-value">Monday &ndash; Friday: 9:00 AM &ndash; 6:00 PM PST</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Table Request Card -->
-        <div class="reservation-form-card" id="delivery">
-          <h3 class="form-title">Reserve a Table or Inquire</h3>
-          <p class="form-sub">Kindly submit your dining party details or call <a href="tel:+917574826620">+91 75748 26620</a>.</p>
+        <!-- Contact Message Form -->
+        <div class="card contact-form-card">
+          <h3 class="contact-card-title">Send a Message</h3>
+          <p class="contact-card-sub">Fill out the fields below to send an inquiry.</p>
 
-          <form id="reservation-form" class="reservation-form" onsubmit="event.preventDefault(); window.handleReservationSubmit(this);">
+          <form id="contact-form" class="contact-form" onsubmit="event.preventDefault(); window.handleContactSubmit(this);">
             <div class="form-row">
               <div class="form-group">
-                <label for="res-name">Full Name *</label>
-                <input type="text" id="res-name" name="name" required placeholder="Your Name">
+                <label for="contact-name">Name *</label>
+                <input type="text" id="contact-name" name="name" required placeholder="Your full name">
               </div>
               <div class="form-group">
-                <label for="res-phone">Phone Number *</label>
-                <input type="tel" id="res-phone" name="phone" required placeholder="+91 98765 43210">
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="res-email">Email Address *</label>
-                <input type="email" id="res-email" name="email" required placeholder="name@example.com">
-              </div>
-              <div class="form-group">
-                <label for="res-guests">Number of Guests *</label>
-                <select id="res-guests" name="guests" required>
-                  <option value="2">2 Guests</option>
-                  <option value="4" selected>4 Guests</option>
-                  <option value="6">6 Guests</option>
-                  <option value="8+">8+ Guests (Celebration)</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="res-journey">Experience Preference</label>
-                <select id="res-journey" name="journey">
-                  <option value="Aakdo (9-Stage Journey)">Aakdo — 9-Stage Culinary Journey (₹2,400)</option>
-                  <option value="Kaner (7-Stage Journey)">Kaner — 7-Stage Culinary Journey (₹1,800)</option>
-                  <option value="Aboli (4-Course Meal)">Aboli — 4-Course Meal</option>
-                  <option value="Jain Preparation Request">Strict Jain Dietary Preparation</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="res-date">Date &amp; Session *</label>
-                <input type="date" id="res-date" name="date" required>
+                <label for="contact-email">Email *</label>
+                <input type="email" id="contact-email" name="email" required placeholder="you@example.com">
               </div>
             </div>
 
             <div class="form-group">
-              <label for="res-notes">Special Requests / Jain Diet</label>
-              <textarea id="res-notes" name="notes" rows="2" placeholder="Let us know if you require root-vegetable free Jain preparation, anniversary arrangements, etc."></textarea>
+              <label for="contact-subject">Subject</label>
+              <input type="text" id="contact-subject" name="subject" placeholder="What is this regarding?">
             </div>
 
-            <button type="submit" class="btn btn-gold-submit" id="res-submit-btn">
-              <span>Send Reservation Request</span>
+            <div class="form-group">
+              <label for="contact-message">Message *</label>
+              <textarea id="contact-message" name="message" rows="4" required placeholder="Write your message here..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              Send Message
             </button>
-            <p class="form-disclaimer">Instant notification sent to Sārvatt dining concierge.</p>
           </form>
 
-          <div id="reservation-success-box" class="reservation-success-box" style="display:none;">
+          <div id="contact-success-box" class="contact-success-box" style="display: none;">
             <div class="success-icon">✓</div>
-            <h4>Request Received</h4>
-            <p id="success-message-text">Thank you. The dining concierge at Hyatt Regency Ahmedabad will contact you shortly.</p>
-            <button type="button" class="btn btn-gold-sm" onclick="window.resetReservationForm()">Submit Another Inquiry</button>
+            <h4>Message Sent Successfully</h4>
+            <p>Thank you for reaching out. We have received your submission and will get back to you shortly.</p>
+            <button type="button" class="btn btn-secondary btn-sm" onclick="window.resetContactForm()">Send Another Message</button>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 22. FOOTER -->
+  <!-- ==========================================================================
+       7. SITE FOOTER
+       ========================================================================== -->
   <footer class="site-footer">
     <div class="container footer-container">
-      <!-- Footer Brand Column -->
       <div class="footer-col brand-col">
-        <div class="footer-brand">
-          <svg viewBox="0 0 40 40" class="footer-leaf-svg" aria-hidden="true">
-            <path d="M20 38 Q20 20 20 6" stroke="#cfa036" stroke-width="2" fill="none"/>
-            <path d="M20 4 C16 10 16 18 20 23 C24 18 24 10 20 4 Z" fill="#cfa036"/>
-            <path d="M19 14 C12 11 8 18 14 22 C18 21 19 18 19 14 Z" fill="#cfa036"/>
-            <path d="M21 14 C28 11 32 18 26 22 C22 21 21 18 21 14 Z" fill="#cfa036"/>
-          </svg>
-          <div>
-            <span class="footer-logo-title">Sārvatt</span>
-            <span class="footer-logo-tagline">Best Gujarati Restaurant</span>
-          </div>
-        </div>
+        <a href="#hero" class="brand-logo footer-logo">
+          <span class="brand-symbol">◈</span>
+          <span class="brand-name">BrandName</span>
+        </a>
         <p class="footer-desc">
-          An experiential Gujarati dining journey inspired by the culinary traditions of Gujarat and Rajasthan.
-        </p>
-        <p class="footer-address">
-          <strong>Hyatt Regency Ahmedabad · Second Floor</strong><br>
-          17/A Ashram Road, Near Sabarmati Riverfront, Usmanpura, Ahmedabad, Gujarat 380014
+          A modern, modular web template built with clean HTML5, robust CSS, and lightweight JavaScript.
         </p>
       </div>
 
-      <!-- Quick Links -->
       <div class="footer-col">
         <h4 class="footer-col-title">Navigation</h4>
         <ul class="footer-links">
-          <li><a href="#about">About Sārvatt</a></li>
-          <li><a href="#cuisine">Cuisine</a></li>
-          <li><a href="#experiences">Experiences (Aakdo &amp; Kaner)</a></li>
-          <li><a href="#journey">The 9 Stages</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#video">Video Experience</a></li>
-          <li><a href="#drinks">Drinks Menu</a></li>
-          <li><a href="#menu-pdf">Explore the Menu</a></li>
-          <li><a href="#price-guide">Price Guide</a></li>
-          <li><a href="#hours">Opening Hours</a></li>
-          <li><a href="#location">Find Sārvatt</a></li>
-          <li><a href="#contact">Contact &amp; Reservations</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#showcase">Showcase</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
 
-      <!-- Official Links -->
       <div class="footer-col">
-        <h4 class="footer-col-title">Official Links</h4>
+        <h4 class="footer-col-title">Resources</h4>
         <ul class="footer-links">
-          <li>
-            <a href="https://maps.app.goo.gl/8dhq83QAuUNSXTdN8" target="_blank" rel="noopener noreferrer">
-              Google Maps Location ↗
-            </a>
-          </li>
-          <li>
-            <a href="https://www.hyatt.com/hyatt-regency/en-US/amdhr-hyatt-regency-ahmedabad" target="_blank" rel="noopener noreferrer">
-              Official Hyatt Regency Ahmedabad ↗
-            </a>
-          </li>
-          <li>
-            <a href="https://www.hyatt.com/content/dam/hotel/propertysites/assets/regency/amdhr/documents/en_US/dining/sarvatt/Sarvatt-Restaurant-Menu.pdf" target="_blank" rel="noopener noreferrer">
-              Official Sārvatt Menu (PDF) ↗
-            </a>
-          </li>
+          <li><a href="#about">Documentation</a></li>
+          <li><a href="#features">Component Library</a></li>
+          <li><a href="#showcase">Design System</a></li>
+          <li><a href="#contact">Support Desk</a></li>
         </ul>
+      </div>
 
-        <div class="footer-contact-block mt-3">
-          <p class="footer-contact-line"><strong>Restaurant:</strong> <a href="tel:+917574826620">+91 75748 26620</a></p>
-          <p class="footer-contact-line"><strong>Hotel:</strong> <a href="tel:+917961171234">+91 79 6117 1234</a></p>
-          <p class="footer-contact-line"><strong>Dining Email:</strong> <a href="mailto:dining.ahmedabad@hyatt.com">dining.ahmedabad@hyatt.com</a></p>
-        </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Legal</h4>
+        <ul class="footer-links">
+          <li><a href="#hero">Privacy Policy</a></li>
+          <li><a href="#hero">Terms of Service</a></li>
+          <li><a href="#hero">Security Standards</a></li>
+        </ul>
       </div>
     </div>
 
-    <!-- Bottom Copyright Bar -->
-    <div class="footer-bottom-bar">
+    <div class="footer-bottom">
       <div class="container footer-bottom-inner">
-        <p class="copyright-text">
-          &copy; <span id="current-year">2026</span> Sārvatt - Best Gujarati Restaurant. Hosted at Hyatt Regency Ahmedabad.
-        </p>
-        <p class="credits-text">
-          17/A Ashram Road, Near Sabarmati Riverfront, Ahmedabad, Gujarat 380014, India.
-        </p>
+        <p>&copy; <span id="current-year">2026</span> BrandName. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#hero">Privacy</a>
+          <a href="#hero">Terms</a>
+          <a href="#hero">Status</a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <!-- LIGHTBOX MODAL FOR GALLERY IMAGES -->
+  <!-- ==========================================================================
+       INTERACTIVE LIGHTBOX MODAL
+       ========================================================================== -->
   <div class="lightbox-modal" id="lightbox-modal" role="dialog" aria-modal="true" aria-hidden="true">
-    <button class="lightbox-close" id="lightbox-close" aria-label="Close Lightbox">&times;</button>
-    <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous Image">&#10094;</button>
-    <button class="lightbox-next" id="lightbox-next" aria-label="Next Image">&#10095;</button>
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close dialog">&times;</button>
     <div class="lightbox-content-box">
-      <img src="" alt="" id="lightbox-img" class="lightbox-img">
-      <div class="lightbox-caption" id="lightbox-caption"></div>
+      <div class="lightbox-icon-wrap" id="lightbox-icon">📊</div>
+      <h3 class="lightbox-title" id="lightbox-title">Item Title</h3>
+      <p class="lightbox-caption" id="lightbox-caption">Item Description</p>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 </html>

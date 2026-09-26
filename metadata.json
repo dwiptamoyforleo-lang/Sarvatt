@@ -1,6 +1,6 @@
 {
   "name": "Sarvatt",
-  "description": "Sārvatt - Best Gujarati Restaurant. An authentic gastronomic journey through Kathiawar, Kutch, Surat, and Saurashtra at Hyatt Regency Ahmedabad.",
+  "description": "A clean, modern, and responsive website starter template with modular components and semantic code structure.",
   "requestFramePermissions": [],
   "majorCapabilities": [
     "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
